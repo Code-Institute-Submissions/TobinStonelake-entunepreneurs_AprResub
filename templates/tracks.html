@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>I'm extending the Base Template</h2>
-
     {% for track in tracks %}
-        {{ track.artist }}<br>
         {{ track.set_name }}<br>
+        {{ track.artist }}<br>
         {{ track.remix }}<br>
         {{ track.track_name }}<br>
         {{ track.track_genre }}<br>
