@@ -26,21 +26,21 @@
                     <li><a href="#">Manage Sets</a></li>
                     <li><a href="#">Log In</a></li>
                     <li><a href="#">Log Out</a></li>
-                    <li><a href="#">Register</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
                 </ul>
             </div>
         </nav>
         
         <!-- Mobile Sidenav-->
         <ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align deep-orange-text center-align text-accent-3">Entunepreneurs</h4></li>
+            <li><h4 class="center-align deep-orange-text text-accent-3">Entunepreneurs</h4></li>
             <li><a href="{{ url_for('get_tracks') }}">Home</a></li>
             <li><a href="#">Profile</a></li>
             <li><a href="#">New Set</a></li>
             <li><a href="#">Manage Sets</a></li>
             <li><a href="#">Log In</a></li>
             <li><a href="#">Log Out</a></li>
-            <li><a href="#">Register</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>
     </header>
 
