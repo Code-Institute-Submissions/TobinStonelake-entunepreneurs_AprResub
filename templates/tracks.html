@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entunepreneurs</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>I'm extending the Base Template</h2>
+
     {% for track in tracks %}
         {{ track.artist }}<br>
         {{ track.set_name }}<br>
@@ -19,5 +16,5 @@
         {{ track.bpm }}<br>
         {{ track.mixable }}<br>
     {% endfor %}
-</body>
-</html>
+
+{% endblock %}
