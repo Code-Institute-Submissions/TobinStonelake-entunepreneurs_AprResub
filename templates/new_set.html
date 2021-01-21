@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align deep-orange-text text-accent-3">
+        Add Set
+    </h3>
+
+    <div class="row">
+        <form class="col s12" method="POST" action="">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-record-vinyl prefix deep-orange-text text-accent-3"></i>
+                    <input id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix">Set Name</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="fas fa-compact-disc prefix deep-orange-text text-accent-3"></i>
+                    <input id="icon_telephone" type="tel" class="validate">
+                    <label for="icon_telephone">Genre</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="fas fa-warehouse prefix deep-orange-text text-accent-3"></i>
+                    <input id="icon_warehouse" type="tel" class="validate">
+                    <label for="icon_warehouse">Venue</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="fas fa-user-astronaut prefix deep-orange-text text-accent-3"></i>
+                    <input id="icon_user" type="tel" class="validate">
+                    <label for="icon_user">Uploaded By</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="fas fa-podcast prefix deep-orange-text text-accent-3"></i>
+                    <input id="icon_web" type="tel" class="validate">
+                    <label for="icon_web">Artist Page</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="fas fa-calendar-alt prefix deep-orange-text text-accent-3"></i>
+                    <input id="icon_date" type="tel" class="validate">
+                    <label for="icon_date">Date</label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
