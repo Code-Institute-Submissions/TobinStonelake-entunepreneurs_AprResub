@@ -21,8 +21,9 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_tracks")
 def get_tracks():
+    sets = list(mongo.db.sets.find())
     tracks = list(mongo.db.tracks.find())
-    return render_template("tracks.html", tracks=tracks)
+    return render_template("tracks.html", tracks=tracks, sets=sets)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -99,8 +100,21 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_set")
+@app.route("/add_set", methods=["GET", "POST"])
 def add_set():
+    if request.method == "POST":
+        sets = {
+            "set_name": request.form.get("set_name"),
+            "genre": request.form.get("genre"),
+            "venue": request.form.get("venue"),
+            "uploaded_by": session["user"],
+            "artists_page": request.form.get("artists_page"),
+            "date": request.form.get("date")
+        }
+        mongo.db.sets.insert_one(sets)
+        flash("Set Successfully Added!")
+        return redirect(url_for("get_tracks"))
+
     return render_template("new_set.html")
 
 
