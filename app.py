@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_tracks")
 def get_tracks():
-    tracks = mongo.db.tracks.find()
+    tracks = list(mongo.db.tracks.find())
     return render_template("tracks.html", tracks=tracks)
 
 
