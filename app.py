@@ -113,9 +113,32 @@ def add_set():
         }
         mongo.db.sets.insert_one(sets)
         flash("Set Successfully Added!")
-        return redirect(url_for("get_tracks"))
+        return redirect(url_for("add_tracks"))
 
     return render_template("new_set.html")
+
+
+@app.route("/add_tracks", methods=["GET", "POST"])
+def add_tracks():
+    if request.method == "POST":
+        tracks = {
+            "artist": request.form.get("artist"),
+            "remix": request.form.get("remix"),
+            "track_name": request.form.get("track_name"),
+            "track_genre": request.form.get("track_genre"),
+            "download_link": request.form.get("download_link"),
+            "preview": request.form.get("preview"),
+            "folder": request.form.get("folder"),
+            "key": request.form.get("key"),
+            "bpm": request.form.get("bpm"),
+            "mixable": request.form.get("mixable")
+        }
+        mongo.db.tracks.insert_one(tracks)
+        flash("Track Successfully Added!")
+        return redirect(url_for("add_tracks"))
+
+    set_selector = mongo.db.sets.find().sort("set_name", 1)
+    return render_template("new_tracks.html", set_selection=set_selector)
 
 
 if __name__ == "__main__":

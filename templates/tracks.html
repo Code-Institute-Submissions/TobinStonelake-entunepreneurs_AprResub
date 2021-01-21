@@ -2,8 +2,8 @@
 {% block content %}
 
     <ul class="collapsible" data-collapsible="accordion">
+        {% for set in sets %}
         <li>
-            {% for set in sets %}
             <div class="collapsible-header deep-orange-text text-accent-3 text-shadow blue-grey darken-3">
                 <i class="fas fa-record-vinyl"></i>
                 <ul>
@@ -16,7 +16,6 @@
                             href="{{ set.artists_page }}" target="_blank">{{ set.artists_page }}</a></li>
                 </ul>
             </div>
-            {% endfor %}
             <div class="collapsible-body blue-grey darken-1">
                 <ul class="collapsible" data-collapsible="accordion">
                     {% for track in tracks %}
@@ -38,9 +37,9 @@
                                 {{ track.key }}<br>
                                 {{ track.bpm }}<br>
                                 {% if track.mixable == "on" %}
-                                    Mixable?  <i class="fas fa-thumbs-up"></i>
+                                Mixable? <i class="fas fa-thumbs-up"></i>
                                 {% elif track.mixable == "off" %}
-                                    Mixable?  <i class="fas fa-thumbs-down"></i>
+                                Mixable? <i class="fas fa-thumbs-down"></i>
                                 {% endif %}
                             </p>
                         </div>
@@ -49,6 +48,7 @@
                 </ul>
             </div>
         </li>
+        {% endfor %}
     </ul>
 
 {% endblock %}

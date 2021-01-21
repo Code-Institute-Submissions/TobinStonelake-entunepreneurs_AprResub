@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align deep-orange-text text-accent-3">
+        Add Tracks
+    </h3>
+
+    <div class="row card-panel deep-orange-text text-accent-3 text-shadow blue-grey darken-3">
+        <form class="col s12" method="POST" action="{{ url_for('add_tracks') }}">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-record-vinyl prefix deep-orange-text text-accent-3"></i>
+                    <select id="set_selection" name="set_selection" class="validate" required>
+                        <option value="" disabled selected>Choose your Set</option>
+                        {% for selection in set_selection %}
+                            <option value="{{ selection.set_name }}">{{ selection.set_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="set_selection">Set Selection</label>
+                </div>
+            </div>
+            <!-- Track No -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-list-ol prefix deep-orange-text text-accent-3"></i>
+                    <input id="track_no" name="track_no" minlength="5" maxlength="50" 
+                        type="number" class="validate" required>
+                    <label for="track_no">Track Number</label>
+                </div>
+            </div>
+            <!-- Artist -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-astronaut prefix deep-orange-text text-accent-3"></i>
+                    <input id="artist" name="artist" minlength="5" maxlength="50" 
+                        type="text" class="validate" required>
+                    <label for="artist">Artist</label>
+                </div>
+            </div>
+            <!-- Remix -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-redo prefix deep-orange-text text-accent-3"></i>
+                    <input id="remix" name="remix" minlength="5" maxlength="50" 
+                        type="text" class="validate">
+                    <label for="remix">remix</label>
+                </div>
+            </div>
+            <!-- Track Name -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-play-circle prefix deep-orange-text text-accent-3"></i>
+                    <input id="track_name" name="track_name" minlength="5" maxlength="50" 
+                        type="text" class="validate" required>
+                    <label for="track_name">Track Name</label>
+                </div>
+            </div>
+            <!-- Track Genre -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-compact-disc prefix deep-orange-text text-accent-3"></i>
+                    <input id="track_genre" name="track_genre" minlength="5" maxlength="50" 
+                        type="text" class="validate">
+                    <label for="track_genre">Track Genre</label>
+                </div>
+            </div>
+            <!-- Download Link -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-cart-arrow-down prefix deep-orange-text text-accent-3"></i>
+                    <input id="download_link" name="download_link" 
+                        type="text" class="validate">
+                    <label for="download_link">Download Link <em>(https:// req)</em></label>
+                </div>
+            </div>
+            <!--Preview Link-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-headphones prefix deep-orange-text text-accent-3"></i>
+                    <input id="preview" name="preview" 
+                        type="text" class="validate">
+                    <label for="preview">Preview Link <em>(https:// req)</em></label>
+                </div>
+            </div>
+            <!--PC Folder-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-folder-open prefix deep-orange-text text-accent-3"></i>
+                    <input id="folder" name="folder" 
+                        type="text" class="validate">
+                    <label for="folder">PC Folder</label>
+                </div>
+            </div>
+            <!--Key-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-key prefix deep-orange-text text-accent-3"></i>
+                    <input id="key" name="key" 
+                        type="text" class="validate">
+                    <label for="key">Key</label>
+                </div>
+            </div>
+            <!--BPM-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-stopwatch prefix deep-orange-text text-accent-3"></i>
+                    <input id="bpm" name="bpm" 
+                        type="number" class="validate">
+                    <label for="bpm">BPM</label>
+                </div>
+            </div>
+            <!--Mixable-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-hand-paper prefix deep-orange-text text-accent-3"></i>
+                    <input id="mixable" name="mixable" 
+                        type="text" class="validate">
+                    <label for="mixable">Mixable <em>(On/Off)</em></label>
+                </div>
+            </div>
+            <!-- Submit Set Button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large deep-orange accent-3 blue-grey-text text-darken-4 text-shadow center-align">
+                        <strong>Add Track</strong>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
