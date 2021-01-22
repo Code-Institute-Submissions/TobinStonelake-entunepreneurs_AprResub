@@ -118,10 +118,19 @@ def add_set():
     return render_template("new_set.html")
 
 
+@app.route("/edit_set/<sets_id>", methods=["GET", "POST"])
+def edit_set(sets_id):
+    sets = mongo.db.sets.find_one({"_id": ObjectId(sets_id)})
+    set_selector = mongo.db.sets.find().sort("set_name", 1)
+    return render_template(
+        "edit_set.html", sets=sets, set_selection=set_selector)
+
+
 @app.route("/add_tracks", methods=["GET", "POST"])
 def add_tracks():
     if request.method == "POST":
         tracks = {
+            "set_name": request.form.get("set_name"),
             "artist": request.form.get("artist"),
             "remix": request.form.get("remix"),
             "track_name": request.form.get("track_name"),
