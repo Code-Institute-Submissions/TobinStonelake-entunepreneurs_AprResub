@@ -4,17 +4,24 @@
     <ul class="collapsible" data-collapsible="accordion">
         {% for set in sets %}
         <li>
-            <div class="collapsible-header deep-orange-text text-accent-3 text-shadow blue-grey darken-3">
+            <div class="row collapsible-header deep-orange-text text-accent-3 text-shadow blue-grey darken-3">
                 <i class="fas fa-record-vinyl"></i>
+                <div class="col s6">
                 <ul>
                     <li><strong>Set Name:</strong> {{ set.set_name }}</li>
                     <li><strong> Uploaded By:</strong> {{ set.uploaded_by }}</li>
-                    <li><strong> Date:</strong> {{ set.date }}</li>
+                    <li><strong> Date:</strong> {{ set.date }}</li><br>
+                    <i class="fas fa-angle-double-down"></i>
+                </ul>
+                </div>
+                <div class="col s6">
+                <ul>    
                     <li><strong> Genre:</strong> {{ set.genre }}</li>
                     <li><strong> Venue:</strong> {{ set.venue }}</li>
                     <li><strong> Website:</strong> <a class="deep-orange-text text-accent-3 text-shadow"
                             href="{{ set.artists_page }}" target="_blank">{{ set.artists_page }}</a></li>
                 </ul>
+                </div>
             </div>
             <div class="collapsible-body blue-grey darken-1">
                 <ul class="collapsible" data-collapsible="accordion">
