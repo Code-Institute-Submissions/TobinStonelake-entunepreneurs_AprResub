@@ -12,7 +12,7 @@
                     <i class="fas fa-record-vinyl prefix deep-orange-text text-accent-3"></i>
                     <select id="set_name" name="set_name" class="validate" required>
                         <option value="" disabled selected>Choose your Set</option>
-                        {% for selection in set_selection %}
+                        {% for selection in set_selector %}
                             <option value="{{ selection.set_name }}">{{ selection.set_name }}</option>
                         {% endfor %}
                     </select>

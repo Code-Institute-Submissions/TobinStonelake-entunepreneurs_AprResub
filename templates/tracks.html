@@ -1,72 +1,77 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <ul class="collapsible" data-collapsible="accordion">
-        {% for set in sets %}
-        <li>
-            <div class="row collapsible-header deep-orange-text text-accent-3 text-shadow blue-grey darken-3">
-                <i class="fas fa-record-vinyl"></i>
-                <div class="col s5">
-                <ul>
-                    <li><strong>Set Name:</strong> {{ set.set_name }}</li>
-                    <li><strong> Uploaded By:</strong> {{ set.uploaded_by }}</li>
-                    <li><strong> Date:</strong> {{ set.date }}</li><br>
-                    <i class="fas fa-angle-double-down"></i>
-                </ul>
-                </div>
-                <div class="col s5">
-                <ul>    
-                    <li><strong> Genre:</strong> {{ set.genre }}</li>
-                    <li><strong> Venue:</strong> {{ set.venue }}</li>
-                    <li><strong> Website:</strong> <a class="deep-orange-text text-accent-3 text-shadow"
-                            href="{{ set.artists_page }}" target="_blank">{{ set.artists_page }}</a></li>
-                </ul>
-                </div>
-                <div class="col s2">
-                    <a href="{{ url_for('edit_set', sets_id=sets._id) }}" class="btn-small">Edit</a>
-                    <a href="" class="btn-small">Delete</a>
-                    <br>
-                </div>
-            </div>
-            <div class="collapsible-body blue-grey darken-1">
-                <ul class="collapsible" data-collapsible="accordion">
-                    {% for track in tracks %}
-                    {% if track.set_name == set.set_name %}
-                    <li>
-                        <div class="collapsible-header deep-orange-text text-accent-3 text-shadow blue-grey darken-2">
-                            <i class="fas fa-music"></i>
+    <div class="row">
+        <div class="col s10 offset-s1">
+            <ul class="collapsible" data-collapsible="accordion">
+                {% for set in sets %}
+                <li>
+                    <div class="row collapsible-header deep-orange-text text-accent-3 text-shadow blue-grey darken-3">
+                        <i class="fas fa-record-vinyl"></i>
+                        <div class="col s5">
                             <ul>
-                            <li><strong>No:</strong> {{ track.track_no }}</li>
-                            <li><strong>Name:</strong> {{ track.track_name }}</li>
+                                <li><strong>Set Name:</strong> {{ set.set_name }}</li>
+                                <li><strong> Uploaded By:</strong> {{ set.uploaded_by }}</li>
+                                <li><strong> Date:</strong> {{ set.date }}</li><br>
+                                <i class="fas fa-angle-double-down"></i>
                             </ul>
                         </div>
-                        <div class="collapsible-body deep-orange-text text-accent-3">
-                                <p>
-                                    {{ track.set_name }}<br>
-                                    {{ track.artist }}<br>
-                                    {{ track.remix }}<br>
-                                    {{ track.track_name }}<br>
-                                    {{ track.track_genre }}<br>
-                                    {{ track.download_link }}<br>
-                                    {{ track.preview }}<br>
-                                    {{ track.folder }}<br>
-                                    {{ track.key }}<br>
-                                    {{ track.bpm }}<br>
-                                    {% if track.mixable == "on" %}
-                                    Mixable? <i class="fas fa-thumbs-up"></i>
-                                    {% elif track.mixable == "off" %}
-                                    Mixable? <i class="fas fa-thumbs-down"></i>
-                                    {% endif %}
-                                </p>
+                        <div class="col s5">
+                            <ul>
+                                <li><strong> Genre:</strong> {{ set.genre }}</li>
+                                <li><strong> Venue:</strong> {{ set.venue }}</li>
+                                <li><strong> Website:</strong> <a class="deep-orange-text text-accent-3 text-shadow"
+                                        href="{{ set.artists_page }}" target="_blank">{{ set.artists_page }}</a></li>
+                            </ul>
                         </div>
-                    </li>
-                    {% elif track.set_name != set.setname %}
-                    {% endif %}
-                    {% endfor %}
-                </ul>
-            </div>
-        </li>
-        {% endfor %}
-    </ul>
+                        <div class="col s2">
+                            <a href="{{ url_for('edit_set', set_id=set._id) }}" class="btn-small">Edit</a>
+                            <a href="" class="btn-small">Delete</a>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="collapsible-body blue-grey darken-1">
+                        <ul class="collapsible" data-collapsible="accordion">
+                            {% for track in tracks %}
+                            {% if track.set_name == set.set_name %}
+                            <li>
+                                <div
+                                    class="collapsible-header deep-orange-text text-accent-3 text-shadow blue-grey darken-2">
+                                    <i class="fas fa-music"></i>
+                                    <ul>
+                                        <li><strong>No:</strong> {{ track.track_no }}</li>
+                                        <li><strong>Name:</strong> {{ track.track_name }}</li>
+                                    </ul>
+                                </div>
+                                <div class="collapsible-body deep-orange-text text-accent-3">
+                                    <p>
+                                        {{ track.set_name }}<br>
+                                        {{ track.artist }}<br>
+                                        {{ track.remix }}<br>
+                                        {{ track.track_name }}<br>
+                                        {{ track.track_genre }}<br>
+                                        {{ track.download_link }}<br>
+                                        {{ track.preview }}<br>
+                                        {{ track.folder }}<br>
+                                        {{ track.key }}<br>
+                                        {{ track.bpm }}<br>
+                                        {% if track.mixable == "on" %}
+                                        Mixable? <i class="fas fa-thumbs-up"></i>
+                                        {% elif track.mixable == "off" %}
+                                        Mixable? <i class="fas fa-thumbs-down"></i>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </li>
+                            {% elif track.set_name != set.setname %}
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 
 {% endblock %}

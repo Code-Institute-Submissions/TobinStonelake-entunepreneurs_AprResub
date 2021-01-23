@@ -118,12 +118,12 @@ def add_set():
     return render_template("new_set.html")
 
 
-@app.route("/edit_set/<sets_id>", methods=["GET", "POST"])
-def edit_set(sets_id):
-    sets = mongo.db.sets.find_one({"_id": ObjectId(sets_id)})
+@app.route("/edit_set/<set_id>", methods=["GET", "POST"])
+def edit_set(set_id):
+    set = mongo.db.sets.find_one({"_id": ObjectId(set_id)})
     set_selector = mongo.db.sets.find().sort("set_name", 1)
     return render_template(
-        "edit_set.html", sets=sets, set_selection=set_selector)
+        "edit_set.html", set=set, set_selector=set_selector)
 
 
 @app.route("/add_tracks", methods=["GET", "POST"])
@@ -147,7 +147,7 @@ def add_tracks():
         return redirect(url_for("add_tracks"))
 
     set_selector = mongo.db.sets.find().sort("set_name", 1)
-    return render_template("new_tracks.html", set_selection=set_selector)
+    return render_template("new_tracks.html", set_selector=set_selector)
 
 
 if __name__ == "__main__":
