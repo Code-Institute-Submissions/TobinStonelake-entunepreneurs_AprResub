@@ -120,6 +120,18 @@ def add_set():
 
 @app.route("/edit_set/<set_id>", methods=["GET", "POST"])
 def edit_set(set_id):
+    if request.method == "POST":
+        submit = {
+            "set_name": request.form.get("set_name"),
+            "genre": request.form.get("genre"),
+            "venue": request.form.get("venue"),
+            "uploaded_by": session["user"],
+            "artists_page": request.form.get("artists_page"),
+            "date": request.form.get("date")
+        }
+        mongo.db.sets.update({"_id": ObjectId(set_id)}, submit)
+        flash("Set Successfully Updated!")
+
     set = mongo.db.sets.find_one({"_id": ObjectId(set_id)})
     set_selector = mongo.db.sets.find().sort("set_name", 1)
     return render_template(
