@@ -5,7 +5,7 @@
         Add Tracks
     </h3>
 
-    <div class="row card-panel deep-orange-text text-accent-3 text-shadow blue-grey darken-3">
+    <div class="row card-panel blue-grey darken-3">
         <form class="col s12" method="POST" action="{{ url_for('add_tracks') }}">
             <div class="row">
                 <div class="input-field col s12">
@@ -24,7 +24,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-list-ol prefix deep-orange-text text-accent-3"></i>
                     <input id="track_no" name="track_no" minlength="1" maxlength="500" 
-                        type="number" class="validate" required>
+                        type="number" class="validate deep-orange-text text-accent-3" required>
                     <label for="track_no">Track Number</label>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-user-astronaut prefix deep-orange-text text-accent-3"></i>
                     <input id="artist" name="artist" minlength="1" maxlength="50" 
-                        type="text" class="validate" required>
+                        type="text" class="validate deep-orange-text text-accent-3" required>
                     <label for="artist">Artist</label>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-redo prefix deep-orange-text text-accent-3"></i>
                     <input id="remix" name="remix" minlength="1" maxlength="50" 
-                        type="text" class="validate">
+                        type="text" class="validate deep-orange-text text-accent-3">
                     <label for="remix">remix</label>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-play-circle prefix deep-orange-text text-accent-3"></i>
                     <input id="track_name" name="track_name" minlength="1" maxlength="50" 
-                        type="text" class="validate" required>
+                        type="text" class="validate validate deep-orange-text text-accent-3" required>
                     <label for="track_name">Track Name</label>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-compact-disc prefix deep-orange-text text-accent-3"></i>
                     <input id="track_genre" name="track_genre" minlength="1" maxlength="50" 
-                        type="text" class="validate">
+                        type="text" class="validate validate deep-orange-text text-accent-3">
                     <label for="track_genre">Track Genre</label>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-cart-arrow-down prefix deep-orange-text text-accent-3"></i>
                     <input id="download_link" name="download_link" 
-                        type="text" class="validate">
+                        type="text" class="validate validate deep-orange-text text-accent-3">
                     <label for="download_link">Download Link <em>(https:// req)</em></label>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-headphones prefix deep-orange-text text-accent-3"></i>
                     <input id="preview" name="preview" 
-                        type="text" class="validate">
+                        type="text" class="validate validate deep-orange-text text-accent-3">
                     <label for="preview">Preview Link <em>(https:// req)</em></label>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-folder-open prefix deep-orange-text text-accent-3"></i>
                     <input id="folder" name="folder" 
-                        type="text" class="validate">
+                        type="text" class="validate validate deep-orange-text text-accent-3">
                     <label for="folder">PC Folder</label>
                 </div>
             </div>
@@ -96,7 +96,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-key prefix deep-orange-text text-accent-3"></i>
                     <input id="key" name="key" 
-                        type="text" class="validate">
+                        type="text" class="validate validate deep-orange-text text-accent-3">
                     <label for="key">Key</label>
                 </div>
             </div>
@@ -105,7 +105,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-stopwatch prefix deep-orange-text text-accent-3"></i>
                     <input id="bpm" name="bpm" 
-                        type="number" class="validate">
+                        type="number" class="validate validate deep-orange-text text-accent-3">
                     <label for="bpm">BPM</label>
                 </div>
             </div>
@@ -114,7 +114,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-hand-paper prefix deep-orange-text text-accent-3"></i>
                     <input id="mixable" name="mixable" 
-                        type="text" class="validate">
+                        type="text" class="validate validate deep-orange-text text-accent-3">
                     <label for="mixable">Mixable <em>(On/Off)</em></label>
                 </div>
             </div>
