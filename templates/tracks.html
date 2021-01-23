@@ -2,13 +2,13 @@
 {% block content %}
 
     <div class="row">
-        <div class="col s12 m10 offset-m1">
+        <div class="col s12 m12 l10 offset-l1">
             <ul class="collapsible" data-collapsible="accordion">
                 {% for set in sets %}
                 <li>
                     <div class="row collapsible-header deep-orange-text text-accent-3 text-shadow blue-grey darken-3">
                         <i class="fas fa-record-vinyl"></i>
-                        <div class="col s5">
+                        <div class="col m5 s10">
                             <ul>
                                 <li><strong>Set Name:</strong> {{ set.set_name }}</li>
                                 <li><strong> Uploaded By:</strong> {{ set.uploaded_by }}</li>
@@ -16,7 +16,7 @@
                                 <i class="fas fa-angle-double-down"></i>
                             </ul>
                         </div>
-                        <div class="col s5">
+                        <div class="col m5 hide-on-small-only">
                             <ul>
                                 <li><strong> Genre:</strong> {{ set.genre }}</li>
                                 <li><strong> Venue:</strong> {{ set.venue }}</li>
@@ -24,10 +24,16 @@
                                         href="{{ set.artists_page }}" target="_blank">{{ set.artists_page }}</a></li>
                             </ul>
                         </div>
-                        <div class="col s2">
+                        <div class="col m2 s2 center-align">
                             {% if session.user|lower == set.uploaded_by|lower %}
-                                <a href="{{ url_for('edit_set', set_id=set._id) }}" class="btn-small deep-orange accent-3 blue-grey-text text-darken-4 text-shadow center-align"><strong>Edit</strong></a>
-                                <a href="" class="btn-small deep-orange accent-3 blue-grey-text text-darken-4 text-shadow center-align"><strong>Delete</strong></a>
+                                <a href="{{ url_for('edit_set', set_id=set._id) }}" class="btn-small deep-orange accent-3 
+                                    blue-grey-text text-darken-4 text-shadow center-align">
+                                    <strong>Edit</strong>
+                                </a>
+                                <a href="" class="btn-small deep-orange accent-3 
+                                    blue-grey-text text-darken-4 text-shadow center-align">
+                                    <strong>Delete</strong>
+                                </a>
                                 <br>
                             {% endif %}
                         </div>
