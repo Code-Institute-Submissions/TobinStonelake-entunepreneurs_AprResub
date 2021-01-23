@@ -138,6 +138,13 @@ def edit_set(set_id):
         "edit_set.html", set=set, set_selector=set_selector)
 
 
+@app.route("/delete_set/<set_id>")
+def delete_set(set_id):
+    mongo.db.sets.remove({"_id": ObjectId(set_id)})
+    flash("Set Successfully Deleted")
+    return redirect(url_for("get_tracks"))
+
+
 @app.route("/add_tracks", methods=["GET", "POST"])
 def add_tracks():
     if request.method == "POST":
