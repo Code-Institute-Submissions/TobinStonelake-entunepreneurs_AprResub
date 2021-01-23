@@ -11,9 +11,13 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-record-vinyl prefix deep-orange-text text-accent-3"></i>
-                    <input id="set_name" name="set_name" minlength="1" maxlength="50" 
-                        type="text" class="validate" required>
-                    <label for="set_name">Set Name</label>
+                        {% for selection in set_selector %}
+                            {% if selection.set_name == set.set_name %}
+                                <input value="{{ selection.set_name }}" id="set_name" name="set_name" minlength="1" maxlength="50" type="text"
+                                    class="deep-orange-text text-accent-3" required selected>
+                            {% endif %}
+                        {% endfor %}
+                    <label for="set_name">Set Name</label>                        
                 </div>
             </div>
             <!-- Set Genre -->
@@ -21,7 +25,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-compact-disc prefix deep-orange-text text-accent-3"></i>
                     <input id="genre" name="genre" minlength="1" maxlength="50" 
-                        type="text" class="validate" required>
+                       value="{{ set.genre }}" type="text" class="deep-orange-text text-accent-3 validate" required>
                     <label for="genre">Genre</label>
                 </div>
             </div>
@@ -30,7 +34,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-warehouse prefix deep-orange-text text-accent-3"></i>
                     <input id="venue" name="venue" minlength="1" maxlength="50" 
-                        type="text" class="validate">
+                        value="{{ set.venue }}" type="text" class="deep-orange-text text-accent-3 validate">
                     <label for="venue">Venue</label>
                 </div>
             </div>
@@ -39,7 +43,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-user-astronaut prefix deep-orange-text text-accent-3"></i>
                     <input id="uploaded_by" name="uploaded_by" minlength="1" maxlength="50" 
-                        type="text" class="validate">
+                        value="{{ set.uploaded_by }}" type="text" class="deep-orange-text text-accent-3 validate">
                     <label for="uploaded_by">Uploaded By</label>
                 </div>
             </div>
@@ -48,7 +52,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-podcast prefix deep-orange-text text-accent-3"></i>
                     <input id="artists_page" name="artists_page" minlength="1" maxlength="50" 
-                        type="text" class="validate">
+                        value="{{ set.artists_page }}" type="text" class="deep-orange-text text-accent-3 validate">
                     <label for="artists_page">Artist Page <em>(https:// req)</em></label>
                 </div>
             </div>
@@ -57,13 +61,17 @@
                 <div class="input-field col s12">
                     <i class="fas fa-calendar-alt prefix deep-orange-text text-accent-3"></i>
                     <input id="date" name="date" 
-                        type="text" class="datepicker validate" required>
+                        value="{{ set.date }}" type="text" class="deep-orange-text text-accent-3 datepicker validate" required>
                     <label for="date">Date Recorded/Presented</label>
                 </div>
             </div>
-            <!-- Submit Set Button -->
+            <!-- Submit Edits Button -->
             <div class="row">
                 <div class="col s12 center-align">
+                    <!--Cancel Changes Button-->
+                    <a href="{{ url_for('get_tracks') }}" class="btn large deep-orange accent-3 blue-grey-text text-darken-4 text-shadow center-align">
+                        <strong>Cancel</strong>
+                    </a>
                     <button type="submit" class="btn-large deep-orange accent-3 blue-grey-text text-darken-4 text-shadow center-align">
                         <strong>Edit Set</strong>
                     </button>
