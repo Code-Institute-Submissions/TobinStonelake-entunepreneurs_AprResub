@@ -169,6 +169,12 @@ def add_tracks():
     return render_template("new_tracks.html", set_selector=set_selector)
 
 
+@app.route("/get_sets")
+def get_sets():
+    sets = list(mongo.db.sets.find().sort("set_name", 1))
+    return render_template("sets.html", sets=sets)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
