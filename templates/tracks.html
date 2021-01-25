@@ -48,7 +48,7 @@
                                 <li><strong> Genre:</strong> {{ set.genre }}</li>
                                 <li><strong> Venue:</strong> {{ set.venue }}</li>
                                 <li><strong> Website:</strong> <a class="deep-orange-text text-accent-3 text-shadow"
-                                        href="{{ set.artists_page }}" target="_blank">{{ set.artists_page }}</a></li>
+                                        href="{{ set.artists_page }}" target="_blank"><u>{{ set.artists_page }}</u></a></li>
                             </ul>
                         </div>
                         <div class="col m2 s3 center-align">
@@ -65,35 +65,40 @@
                             {% endif %}
                         </div>
                     </div>
-                    <div class="collapsible-body blue-grey darken-1">
+                    <div class="collapsible-body blue-grey darken-3">
                         <ul class="collapsible" data-collapsible="accordion">
                             {% for track in tracks %}
                             {% if track.set_name == set.set_name %}
                             <li>
                                 <div
                                     class="collapsible-header deep-orange-text text-accent-3 text-shadow blue-grey darken-2">
-                                    <i class="fas fa-music"></i>
+                                    <i class="fas fa-music"></i><br>
                                     <ul>
                                         <li><strong>No:</strong> {{ track.track_no }}</li>
-                                        <li><strong>Name:</strong> {{ track.track_name }}</li>
+                                        <li><strong>Name:</strong> {{ track.track_name }}</li><br>
+                                        <i class="fas fa-angle-double-down"></i>
                                     </ul>
                                 </div>
                                 <div class="collapsible-body deep-orange-text text-accent-3">
                                     <p>
-                                        {{ track.set_name }}<br>
-                                        {{ track.artist }}<br>
-                                        {{ track.remix }}<br>
-                                        {{ track.track_name }}<br>
-                                        {{ track.track_genre }}<br>
-                                        {{ track.download_link }}<br>
-                                        {{ track.preview }}<br>
-                                        {{ track.folder }}<br>
-                                        {{ track.key }}<br>
-                                        {{ track.bpm }}<br>
+                                        <strong>Set Name: </strong>{{ track.set_name }}<br>
+                                        <strong>Artist Name: </strong>{{ track.artist }}<br>
+                                        <strong>Remixer/Editer Name: </strong>{{ track.remix }}<br>
+                                        <strong>Track Name: </strong>{{ track.track_name }}<br>
+                                        <strong>Track Genre: </strong>{{ track.track_genre }}<br>
+                                        <strong>Download Link: </strong>
+                                           <a class="deep-orange-text text-accent-3 text-shadow"
+                                           href="{{ track.download_link }}" target="_blank"><u>{{ track.download_link }}</u></a><br> 
+                                        <strong>Preview Link: </strong>
+                                           <a class="deep-orange-text text-accent-3 text-shadow"
+                                           href="{{ track.preview }}" target="_blank"><u>{{ track.preview }}</u></a><br>                                       {{ track.preview }}<br>
+                                        <strong>Where Saved? </strong>{{ track.folder }}<br>
+                                        <strong>Key: </strong>{{ track.key }}<br>
+                                        <strong>BPM: </strong>{{ track.bpm }}<br>
                                         {% if track.mixable == "on" %}
-                                        Mixable? <i class="fas fa-thumbs-up"></i>
+                                        <strong>Mixable? </strong><i class="fas fa-thumbs-up"></i>
                                         {% elif track.mixable == "off" %}
-                                        Mixable? <i class="fas fa-thumbs-down"></i>
+                                        <strong>Mixable? </strong><i class="fas fa-thumbs-down"></i>
                                         {% endif %}
                                     </p>
                                 </div>
