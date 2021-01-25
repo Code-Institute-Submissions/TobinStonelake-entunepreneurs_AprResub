@@ -26,6 +26,13 @@ def get_tracks():
     return render_template("tracks.html", tracks=tracks, sets=sets)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    sets = list(mongo.db.sets.find({"$text": {"$search": query}}))
+    return render_template("tracks.html", sets=sets)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
