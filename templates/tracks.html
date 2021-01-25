@@ -4,25 +4,27 @@
     <h3 class="center-align">Sets</h3>
 
     <div class="row center-align deep-orange-text text-accent-3 text-shadow blue-grey darken-3">
-        <form action="{{ url_for('search') }}" method="post" class="col s12 m12 l10 offset-l1">
-            <div class="valign-wrapper center-align">
-                <div class="input-field col s9 m12 l10 offset-l1">
-                    <i class="fas fa-search prefix deep-orange-text text-accent-3 text-shadow"></i>
-                    <input type="text" name="query" id="query" minlength="1" class="validate" required>
-                    <label for="query">Set Name and Uploaded By</label>
+        <div class="col s12 m12 l10 offset-l1">
+            <form action=" {{ url_for('search') }}" method="post">
+                <div class="valign-wrapper center-align">
+                    <div class="input-field col s9 m12 l10 offset-l1">
+                        <i class="fas fa-search prefix deep-orange-text text-accent-3 text-shadow"></i>
+                        <input type="text" name="query" id="query" minlength="1" class="validate" required>
+                        <label for="query">Set Name and Uploaded By</label>
+                    </div>
+                    <div class="col s3 m6">
+                        <a href="{{ url_for('get_tracks') }}" class="btn-small deep-orange accent-3 
+                                blue-grey-text text-darken-4 text-shadow center-align">
+                            Reset
+                        </a>
+                        <button type="submit" class="btn-small deep-orange accent-3 
+                                blue-grey-text text-darken-4 text-shadow center-align">
+                            Search
+                        </button>
+                    </div>
                 </div>
-                <div class="col s3 m6">
-                    <a href="{{ url_for('get_tracks') }}" class="btn-small deep-orange accent-3 
-                        blue-grey-text text-darken-4 text-shadow center-align">
-                        Reset
-                    </a>
-                    <button type="submit" class="btn-small deep-orange accent-3 
-                        blue-grey-text text-darken-4 text-shadow center-align">
-                        Search
-                    </button>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 
     {% if sets|length > 0 %}

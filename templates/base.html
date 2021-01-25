@@ -15,10 +15,10 @@
 
     <header>
         <!-- Top Navbar -->
-        <nav class="nav-extended text-shadow blue-grey darken-3">
+        <nav class="nav-extended blue-grey darken-3">
             <div class="nav-wrapper">
-                <a href="{{ url_for('get_tracks') }}" class="brand-logo">Entunepreneurs</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-angle-double-down"></i></a>
+                <a href="{{ url_for('get_tracks') }}" class="brand-logo deep-orange-text text-accent-3">Entunepreneurs</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="deep-orange-text text-accent-3 fas fa-angle-double-down"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_tracks') }}">Home</a></li>
                     {% if session.user %}
@@ -36,7 +36,7 @@
         </nav>
         
         <!-- Mobile Sidenav-->
-        <ul class="sidenav" id="mobile-demo">
+        <ul class="sidenav blue-grey darken-3" id="mobile-demo">
             <li><h4 class="center-align deep-orange-text text-accent-3">Entunepreneurs</h4></li>
             <li><a href="{{ url_for('get_tracks') }}">Home</a></li>
                 {% if session.user %}

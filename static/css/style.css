@@ -6,6 +6,14 @@
     line-height: 2;
 }
 
+nav ul li a{
+  color: #ff3d00;
+}
+
+.sidenav li a{
+  color: #ff3d00;
+}
+
 .row {
     margin-bottom: 0px;
 }
