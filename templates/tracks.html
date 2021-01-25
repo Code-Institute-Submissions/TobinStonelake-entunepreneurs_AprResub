@@ -33,7 +33,7 @@
                 <li>
                     <div class="row collapsible-header deep-orange-text text-accent-3 text-shadow blue-grey darken-3">
                         <i class="fas fa-record-vinyl"></i>
-                        <div class="col m5 s10">
+                        <div class="col m5 s9">
                             <ul>
                                 <li><strong>Set Name:</strong> {{ set.set_name }}</li>
                                 <li><strong> Uploaded By:</strong> {{ set.uploaded_by }}</li>
@@ -49,7 +49,7 @@
                                         href="{{ set.artists_page }}" target="_blank">{{ set.artists_page }}</a></li>
                             </ul>
                         </div>
-                        <div class="col m2 s2 center-align">
+                        <div class="col m2 s3 center-align">
                             {% if session.user|lower == set.uploaded_by|lower %}
                                 <a href="{{ url_for('edit_set', set_id=set._id) }}" class="btn-small deep-orange accent-3 
                                     blue-grey-text text-darken-4 text-shadow center-align">
