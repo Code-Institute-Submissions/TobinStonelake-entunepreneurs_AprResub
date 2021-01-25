@@ -14,6 +14,37 @@ nav ul li a{
   color: #ff3d00;
 }
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+body {
+ background-image: url("https://pixabay.com/get/g409190e2bd43820ab67bc9a3a280b7378a9ab61f492d71b85c3dcc9cd8cbc89e39d2caa73b947f3d212f89a5f8f4d53d.jpg");
+ background-color: #cccccc;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+h1 {
+    color: #ff3d00;
+    text-shadow: 10px, 10px, 10px, rgba(255, 255, 255, 0);
+    text-transform: uppercase;
+    font-size: 5em;
+    background-color: #37474f;
+    background-image: linear-gradient(180deg, rgba(255,0,0,0), rgba(245, 245, 245, 1))
+}
+
+footer {
+    margin-top: 30px;
+}
+
+
 .row {
     margin-bottom: 0px;
 }

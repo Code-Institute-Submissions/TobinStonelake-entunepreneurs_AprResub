@@ -10,6 +10,7 @@ $(document).ready(function () {
             done: "Select"
         }
     });
+    
 
     validateMaterializeSelect();
     function validateMaterializeSelect() {
