@@ -7,6 +7,12 @@
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
     {% block styles %}
     {% endblock %}
     <title>Entunepreneurs</title>
@@ -22,7 +28,6 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_tracks') }}">Home</a></li>
                     {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="{{ url_for('add_set') }}">New Set</a></li>
                         <li><a href="{{ url_for('add_tracks') }}">Add Tracks</a></li>
                         <li><a href="{{ url_for('get_sets') }}">Manage Sets</a></li>
@@ -37,10 +42,9 @@
         
         <!-- Mobile Sidenav-->
         <ul class="sidenav blue-grey darken-3" id="mobile-demo">
-            <li><h4 class="center-align deep-orange-text text-accent-3">Entunepreneurs</h4></li>
+            <li><h4 class="brand-logo center-align deep-orange-text text-accent-3">Entunepreneurs</h4></li>
             <li><a href="{{ url_for('get_tracks') }}">Home</a></li>
                 {% if session.user %}
-                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                     <li><a href="{{ url_for('add_set') }}">New Set</a></li>
                     <li><a href="{{ url_for('add_tracks') }}">Add Tracks</a></li>
                     <li><a href="{{ url_for('get_sets') }}">Manage Sets</a></li>

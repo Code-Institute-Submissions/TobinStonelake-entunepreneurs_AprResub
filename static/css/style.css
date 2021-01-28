@@ -1,3 +1,7 @@
+.brand-logo {
+    font-family: 'Righteous', cursive; 
+}
+
 .text-shadow {
     text-shadow: 2px, 2px, 2px, rgb(255, 255, 255, 0.5);
 }
@@ -36,10 +40,13 @@ h1 {
     text-shadow: 10px, 10px, 10px, rgba(255, 255, 255, 0);
     text-transform: uppercase;
     font-size: 5em;
+    font-family: 'Alfa Slab One', cursive;
+    letter-spacing: 3px;
 }
 
 footer {
     margin-top: 30px;
+    font-family: 'Righteous', cursive; 
 }
 
 
@@ -49,5 +56,35 @@ footer {
 
 .btn-small {
     margin: 5px;
-    width: 70px;
+    width: 75px;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-weight: 600;
+    font-size: medium;
+}
+
+form btn-large {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-weight: 700;
+    font-size: medium;
+}
+
+.input-field {
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+li {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.card-title {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: medium;
+}
+
+li strong {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
 }

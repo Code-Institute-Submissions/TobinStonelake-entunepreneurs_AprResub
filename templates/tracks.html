@@ -110,9 +110,9 @@
                                         <strong>Where Saved? </strong>{{ track.folder }}<br>
                                         <strong>Key: </strong>{{ track.key }}<br>
                                         <strong>BPM: </strong>{{ track.bpm }}<br>
-                                        {% if track.mixable == "on" %}
+                                        {% if track.mixable|lower == "on" %}
                                         <strong>Mixable? </strong><i class="fas fa-thumbs-up"></i>
-                                        {% elif track.mixable == "off" %}
+                                        {% elif track.mixable|lower == "off" %}
                                         <strong>Mixable? </strong><i class="fas fa-thumbs-down"></i>
                                         {% endif %}
                                     </p>
