@@ -71,8 +71,8 @@
                             {% if track.set_name == set.set_name %}
                             <li>
                                 <div
-                                    class="row collapsible-header deep-orange-text text-accent-3 text-shadow blue-grey darken-2">
-                                    <div class="col s9">
+                                    class="row collapsible-header deep-orange-text text-accent-3 text-shadow blue-grey darken-4">
+                                    <div class="col s8">
                                     <i class="fas fa-music"></i><br>
                                     <ul>
                                         <li><strong>No:</strong> {{ track.track_no }}</li>
@@ -80,7 +80,7 @@
                                         <i class="fas fa-angle-double-down"></i>
                                     </ul>
                                     </div>
-                                    <div class="col s3">
+                                    <div class="col s4">
                             {% if session.user|lower == set.uploaded_by|lower %}
                                 <a href="{{ url_for('edit_track', track_id=track._id) }}" class="btn-small deep-orange accent-3 
                                     blue-grey-text text-darken-4 text-shadow center-align">

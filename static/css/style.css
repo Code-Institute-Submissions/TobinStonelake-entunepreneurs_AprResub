@@ -54,6 +54,10 @@ footer {
     margin-bottom: 0px;
 }
 
+.collapsible {
+    border: none;
+}
+
 .btn-small {
     margin: 5px;
     width: 75px;
