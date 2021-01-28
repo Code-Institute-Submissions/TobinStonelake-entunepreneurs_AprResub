@@ -7,6 +7,20 @@
 
     <div class="row card-panel blue-grey darken-3">
         <form class="col s12" method="POST" action="{{ url_for('edit_track', track_id=track._id) }}">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-record-vinyl prefix deep-orange-text text-accent-3"></i>
+                    <select id="set_name" name="set_name" class="validate" required>
+                        <option value="" disabled>Choose your Set</option>
+                        {% for selection in set_selector %}
+                            {% if session.user|lower == selection.uploaded_by|lower %}
+                                <option value="{{ track.set_name }}" selected>{{ track.set_name }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                    <label for="set_name">Set Selection</label>
+                </div>
+            </div>
             <!-- Track No -->
             <div class="row">
                 <div class="input-field col s12">
@@ -109,6 +123,10 @@
             <!-- Submit Set Button -->
             <div class="row">
                 <div class="col s12 center-align">
+                    <!--Cancel Changes Button-->
+                    <a href="{{ url_for('get_tracks') }}" class="btn-large deep-orange accent-3 blue-grey-text text-darken-4 text-shadow center-align">
+                        <strong>Cancel</strong>
+                    </a>
                     <button type="submit" class="btn-large deep-orange accent-3 blue-grey-text text-darken-4 text-shadow center-align">
                         <strong>Edit Track</strong>
                     </button>

@@ -157,6 +157,7 @@ def add_tracks():
     if request.method == "POST":
         tracks = {
             "set_name": request.form.get("set_name"),
+            "track_no": request.form.get("track_no"),
             "artist": request.form.get("artist"),
             "remix": request.form.get("remix"),
             "track_name": request.form.get("track_name"),
@@ -178,10 +179,37 @@ def add_tracks():
 
 @app.route("/edit_track/<track_id>", methods=["GET", "POST"])
 def edit_track(track_id):
+    if request.method == "POST":
+        submit = {
+            "set_name": request.form.get("set_name"),
+            "track_no": request.form.get("track_no"),
+            "artist": request.form.get("artist"),
+            "remix": request.form.get("remix"),
+            "track_name": request.form.get("track_name"),
+            "track_genre": request.form.get("track_genre"),
+            "download_link": request.form.get("download_link"),
+            "preview": request.form.get("preview"),
+            "folder": request.form.get("folder"),
+            "key": request.form.get("key"),
+            "bpm": request.form.get("bpm"),
+            "mixable": request.form.get("mixable")
+        }
+        mongo.db.tracks.update({"_id": ObjectId(track_id)}, submit)
+        flash("Track Successfully Updated!")
+
     track = mongo.db.tracks.find_one({"_id": ObjectId(track_id)})
     track_selector = mongo.db.tracks.find().sort("track_name", 1)
+    set_selector = mongo.db.sets.find().sort("set_name", 1)
     return render_template(
-        "edit_tracks.html", track=track, track_selector=track_selector)
+        "edit_tracks.html", track=track, track_selector=track_selector,
+        set_selector=set_selector)
+
+
+@app.route("/delete_track/<track_id>")
+def delete_track(track_id):
+    mongo.db.tracks.remove({"_id": ObjectId(track_id)})
+    flash("Track Successfully Deleted")
+    return redirect(url_for("get_tracks"))
 
 
 @app.route("/get_sets")
