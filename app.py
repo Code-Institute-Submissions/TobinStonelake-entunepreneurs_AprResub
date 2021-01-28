@@ -176,6 +176,14 @@ def add_tracks():
     return render_template("new_tracks.html", set_selector=set_selector)
 
 
+@app.route("/edit_track/<track_id>", methods=["GET", "POST"])
+def edit_track(track_id):
+    track = mongo.db.tracks.find_one({"_id": ObjectId(track_id)})
+    track_selector = mongo.db.tracks.find().sort("track_name", 1)
+    return render_template(
+        "edit_tracks.html", track=track, track_selector=track_selector)
+
+
 @app.route("/get_sets")
 def get_sets():
     sets = list(mongo.db.sets.find().sort("set_name", 1))
