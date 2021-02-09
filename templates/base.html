@@ -23,8 +23,8 @@
         <!-- Top Navbar -->
         <nav class="nav-extended blue-grey darken-3">
             <div class="nav-wrapper">
-                <a href="{{ url_for('get_tracks') }}" class="brand-logo deep-orange-text text-accent-3"><i class="fas fa-lg fa-record-vinyl hide-on-med-and-down"></i> Entunepreneurs </a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="deep-orange-text text-accent-3 fas fa-angle-double-down"></i></a>
+                <a href="{{ url_for('get_tracks') }}" class="brand-logo cyan-text lighten-5"><i class="fas fa-lg fa-record-vinyl hide-on-med-and-down"></i> Entunepreneurs </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="cyan-text lighten-5 fas fa-angle-double-down"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_tracks') }}">Home</a></li>
                     {% if session.user %}
@@ -42,7 +42,7 @@
         
         <!-- Mobile Sidenav-->
         <ul class="sidenav blue-grey darken-3" id="mobile-demo">
-            <li><h4 class="brand-logo center-align deep-orange-text text-accent-3">Entunepreneurs</h4></li>
+            <li><h4 class="brand-logo center-align cyan-text lighten-5">Entunepreneurs</h4></li>
             <li><a href="{{ url_for('get_tracks') }}">Home</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('add_set') }}">New Set</a></li>
@@ -62,7 +62,7 @@
             {% if messages %}
                 {% for message in messages %}
                     <row class="flashes">
-                        <h4 class="center-align deep-orange-text text-accent-3">{{ message }}</h4>
+                        <h4 class="center-align cyan-text lighten-5">{{ message }}</h4>
                     </row>
                 {% endfor %}
             {% endif %}
@@ -74,7 +74,7 @@
         {% endblock %}
     </main>
 
-    <footer class="page-footer center-align deep-orange-text text-accent-3 blue-grey darken-3">
+    <footer class="page-footer center-align cyan-text lighten-5 blue-grey darken-3">
         <p class="copyright">Copyright &copy; Entunepreneurs <span id="copyright"></span></p>
     </footer>
 

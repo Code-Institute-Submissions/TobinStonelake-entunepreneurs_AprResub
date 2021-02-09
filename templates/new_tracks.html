@@ -9,7 +9,7 @@
         <form class="col s12" method="POST" action="{{ url_for('add_tracks') }}">
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-record-vinyl prefix deep-orange-text text-accent-3"></i>
+                    <i class="fas fa-record-vinyl prefix cyan-text lighten-5"></i>
                     <select id="set_name" name="set_name" class="validate" required>
                         <option value="" disabled selected>Choose your Set</option>
                         {% for selection in set_selector %}
@@ -24,106 +24,106 @@
             <!-- Track No -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-list-ol prefix deep-orange-text text-accent-3"></i>
+                    <i class="fas fa-list-ol prefix cyan-text lighten-5"></i>
                     <input id="track_no" name="track_no" minlength="1" maxlength="500" 
-                        type="number" class="validate deep-orange-text text-accent-3" required>
+                        type="number" class="validate cyan-text lighten-5" required>
                     <label for="track_no">Track Number</label>
                 </div>
             </div>
             <!-- Artist -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-user-astronaut prefix deep-orange-text text-accent-3"></i>
+                    <i class="fas fa-user-astronaut prefix cyan-text lighten-5"></i>
                     <input id="artist" name="artist" minlength="1" maxlength="50" 
-                        type="text" class="validate deep-orange-text text-accent-3" required>
+                        type="text" class="validate cyan-text lighten-5" required>
                     <label for="artist">Artist</label>
                 </div>
             </div>
             <!-- Remix -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-redo prefix deep-orange-text text-accent-3"></i>
+                    <i class="fas fa-redo prefix cyan-text lighten-5"></i>
                     <input id="remix" name="remix" minlength="1" maxlength="50" 
-                        type="text" class="validate deep-orange-text text-accent-3">
+                        type="text" class="validate cyan-text lighten-5">
                     <label for="remix">remix</label>
                 </div>
             </div>
             <!-- Track Name -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-play-circle prefix deep-orange-text text-accent-3"></i>
+                    <i class="fas fa-play-circle prefix cyan-text lighten-5"></i>
                     <input id="track_name" name="track_name" minlength="1" maxlength="50" 
-                        type="text" class="validate validate deep-orange-text text-accent-3" required>
+                        type="text" class="validate validate cyan-text lighten-5" required>
                     <label for="track_name">Track Name</label>
                 </div>
             </div>
             <!-- Track Genre -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-compact-disc prefix deep-orange-text text-accent-3"></i>
+                    <i class="fas fa-compact-disc prefix cyan-text lighten-5"></i>
                     <input id="track_genre" name="track_genre" minlength="1" maxlength="50" 
-                        type="text" class="validate validate deep-orange-text text-accent-3">
+                        type="text" class="validate validate cyan-text lighten-5">
                     <label for="track_genre">Track Genre</label>
                 </div>
             </div>
             <!-- Download Link -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-cart-arrow-down prefix deep-orange-text text-accent-3"></i>
+                    <i class="fas fa-cart-arrow-down prefix cyan-text lighten-5"></i>
                     <input id="download_link" name="download_link" 
-                        type="text" class="validate validate deep-orange-text text-accent-3">
+                        type="text" class="validate validate cyan-text lighten-5">
                     <label for="download_link">Download Link <em>(https:// req)</em></label>
                 </div>
             </div>
             <!--Preview Link-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-headphones prefix deep-orange-text text-accent-3"></i>
+                    <i class="fas fa-headphones prefix cyan-text lighten-5"></i>
                     <input id="preview" name="preview" 
-                        type="text" class="validate validate deep-orange-text text-accent-3">
+                        type="text" class="validate validate cyan-text lighten-5">
                     <label for="preview">Preview Link <em>(https:// req)</em></label>
                 </div>
             </div>
             <!--PC Folder-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-folder-open prefix deep-orange-text text-accent-3"></i>
+                    <i class="fas fa-folder-open prefix cyan-text lighten-5"></i>
                     <input id="folder" name="folder" 
-                        type="text" class="validate validate deep-orange-text text-accent-3">
+                        type="text" class="validate validate cyan-text lighten-5">
                     <label for="folder">PC Folder</label>
                 </div>
             </div>
             <!--Key-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-key prefix deep-orange-text text-accent-3"></i>
+                    <i class="fas fa-key prefix cyan-text lighten-5"></i>
                     <input id="key" name="key" 
-                        type="text" class="validate validate deep-orange-text text-accent-3">
+                        type="text" class="validate validate cyan-text lighten-5">
                     <label for="key">Key</label>
                 </div>
             </div>
             <!--BPM-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-stopwatch prefix deep-orange-text text-accent-3"></i>
+                    <i class="fas fa-stopwatch prefix cyan-text lighten-5"></i>
                     <input id="bpm" name="bpm" 
-                        type="number" class="validate validate deep-orange-text text-accent-3">
+                        type="number" class="validate validate cyan-text lighten-5">
                     <label for="bpm">BPM</label>
                 </div>
             </div>
             <!--Mixable-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-hand-paper prefix deep-orange-text text-accent-3"></i>
+                    <i class="fas fa-hand-paper prefix cyan-text lighten-5"></i>
                     <input id="mixable" name="mixable" 
-                        type="text" class="validate validate deep-orange-text text-accent-3">
+                        type="text" class="validate validate cyan-text lighten-5">
                     <label for="mixable">Mixable <em>(On/Off)</em></label>
                 </div>
             </div>
             <!-- Submit Set Button -->
             <div class="row">
                 <div class="col s12 center-align">
-                    <button type="submit" class="btn-large deep-orange accent-3 blue-grey-text text-darken-4 text-shadow center-align">
+                    <button type="submit" class="btn-large cyan lighten-5 accent-3 blue-grey-text text-darken-4 text-shadow center-align">
                         <strong>Add Track</strong>
                     </button>
                 </div>

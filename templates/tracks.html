@@ -3,21 +3,21 @@
 
     <h1 class="center-align">Sets</h1>
 
-    <div class="row center-align deep-orange-text text-accent-3 text-shadow blue-grey darken-3">
+    <div class="row center-align cyan-text lighten-5 text-shadow blue-grey darken-3">
         <div class="col s12 m12 l10 offset-l1">
             <form action=" {{ url_for('search') }}" method="post">
                 <div class="valign-wrapper center-align">
                     <div class="input-field col s9 m12 l10 offset-l1">
-                        <i class="fas fa-search prefix deep-orange-text text-accent-3 text-shadow"></i>
+                        <i class="fas fa-search prefix cyan-text lighten-5 text-shadow"></i>
                         <input type="text" name="query" id="query" minlength="1" class="validate" required>
                         <label for="query">Set Name and Uploaded By</label>
                     </div>
                     <div class="col s3 m6">
-                        <a href="{{ url_for('get_tracks') }}" class="btn-small deep-orange accent-3 
+                        <a href="{{ url_for('get_tracks') }}" class="btn-small cyan lighten-5 accent-3
                                 blue-grey-text text-darken-4 text-shadow center-align">
                             Reset
                         </a>
-                        <button type="submit" class="btn-small deep-orange accent-3 
+                        <button type="submit" class="btn-small cyan lighten-5 accent-3 
                                 blue-grey-text text-darken-4 text-shadow center-align">
                             Search
                         </button>
@@ -33,7 +33,7 @@
             <ul class="collapsible" data-collapsible="accordion">
                 {% for set in sets %}
                 <li>
-                    <div class="row collapsible-header deep-orange-text text-accent-3 text-shadow blue-grey darken-3">
+                    <div class="row collapsible-header cyan-text lighten-5 text-shadow blue-grey darken-3">
                         <i class="fas fa-record-vinyl"></i>
                         <div class="col m5 s9">
                             <ul>
@@ -47,17 +47,17 @@
                             <ul>
                                 <li><strong> Genre:</strong> {{ set.genre }}</li>
                                 <li><strong> Venue:</strong> {{ set.venue }}</li>
-                                <li><strong> Website:</strong> <a class="deep-orange-text text-accent-3 text-shadow"
+                                <li><strong> Website:</strong> <a class="cyan-text lighten-5 text-shadow"
                                         href="{{ set.artists_page }}" target="_blank"><u>{{ set.artists_page }}</u></a></li>
                             </ul>
                         </div>
                         <div class="col m2 s3 center-align">
                             {% if session.user|lower == set.uploaded_by|lower %}
-                                <a href="{{ url_for('edit_set', set_id=set._id) }}" class="btn-small deep-orange accent-3 
+                                <a href="{{ url_for('edit_set', set_id=set._id) }}" class="btn-small cyan lighten-5 accent-3
                                     blue-grey-text text-darken-4 text-shadow center-align">
                                     <strong>Edit</strong>
                                 </a>
-                                <a href="{{ url_for('delete_set', set_id=set._id) }}" class="btn-small deep-orange accent-3 
+                                <a href="{{ url_for('delete_set', set_id=set._id) }}" class="btn-small cyan lighten-5 accent-3
                                     blue-grey-text text-darken-4 text-shadow center-align">
                                     <strong>Delete</strong>
                                 </a>
@@ -71,7 +71,7 @@
                             {% if track.set_name == set.set_name %}
                             <li>
                                 <div
-                                    class="row collapsible-header deep-orange-text text-accent-3 text-shadow blue-grey darken-4">
+                                    class="row collapsible-header cyan-text lighten-5 text-shadow blue-grey darken-4">
                                     <div class="col s8">
                                     <i class="fas fa-music"></i><br>
                                     <ul>
@@ -83,11 +83,11 @@
                                     </div>
                                     <div class="col s4">
                             {% if session.user|lower == set.uploaded_by|lower %}
-                                <a href="{{ url_for('edit_track', track_id=track._id) }}" class="btn-small deep-orange accent-3 
+                                <a href="{{ url_for('edit_track', track_id=track._id) }}" class="btn-small cyan lighten-5 accent-3
                                     blue-grey-text text-darken-4 text-shadow center-align">
                                     <strong>Edit</strong>
                                 </a>
-                                <a href="{{ url_for('delete_track', track_id=track._id) }}" class="btn-small deep-orange accent-3 
+                                <a href="{{ url_for('delete_track', track_id=track._id) }}" class="btn-small cyan lighten-5 accent-3
                                     blue-grey-text text-darken-4 text-shadow center-align">
                                     <strong>Delete</strong>
                                 </a>
@@ -95,7 +95,7 @@
                             {% endif %}
                                     </div>
                                 </div>
-                                <div class="collapsible-body deep-orange-text text-accent-3">
+                                <div class="collapsible-body cyan-text lighten-5">
                                     <p>
                                         <strong>Set Name: </strong>{{ track.set_name }}<br>
                                         <strong>Artist Name: </strong>{{ track.artist }}<br>
@@ -103,10 +103,10 @@
                                         <strong>Track Name: </strong>{{ track.track_name }}<br>
                                         <strong>Track Genre: </strong>{{ track.track_genre }}<br>
                                         <strong>Download Link: </strong>
-                                           <a class="deep-orange-text text-accent-3 text-shadow"
+                                           <a class="cyan-text lighten-5 text-shadow"
                                            href="{{ track.download_link }}" target="_blank"><u>{{ track.download_link }}</u></a><br> 
                                         <strong>Preview Link: </strong>
-                                           <a class="deep-orange-text text-accent-3 text-shadow"
+                                           <a class="cyan-text lighten-5 text-shadow"
                                            href="{{ track.preview }}" target="_blank"><u>{{ track.preview }}</u></a><br>
                                         <strong>Where Saved? </strong>{{ track.folder }}<br>
                                         <strong>Key: </strong>{{ track.key }}<br>
