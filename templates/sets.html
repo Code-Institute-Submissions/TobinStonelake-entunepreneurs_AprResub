@@ -4,35 +4,46 @@
 <h1 class="center-align">Manage Sets</h1>
 
 <div class="row">
-<div class="col s3 offset-s5">
-<a href="{{ url_for('add_tracks') }}" class="btn-large cyan lighten-5 accent-3
+    <div class="col s3 offset-s5">
+        <a href="{{ url_for('add_tracks') }}" class="btn-large cyan lighten-5 accent-3
         blue-grey-text text-darken-4 text-shadow center-align">
-    <strong>Add Track</strong>
-</a>
-</div>
+            <strong>Add Track</strong>
+        </a>
+    </div>
 </div>
 
 <div class="row">
     {% for set in sets %}
-        {% if session.user|lower == set.uploaded_by|lower %}
-            <div class="col s8 offset-s2">
-                <div class="card blue-grey darken-3 test-shadow center-align">
-                    <div class="card-content cyan-text lighten-5">
-                        <span class="card-title">{{ set.set_name }}</span>
+    {% if session.user|lower == set.uploaded_by|lower %}
+    <div class="col s8 offset-s2">
+        <div class="card blue-grey darken-3 test-shadow center-align">
+            <div class="card-content cyan-text lighten-5">
+                <span class="card-title">{{ set.set_name }}</span>
+            </div>
+            <div class="card-action">
+                <a href="{{ url_for('edit_set', set_id=set._id) }}" class="btn-large cyan lighten-5 accent-3
+                            blue-grey-text text-darken-4 text-shadow center-align">
+                    <strong>Edit</strong>
+                </a>
+                <a href="#modal1" class="btn-large cyan lighten-5 accent-3 
+                            blue-grey-text text-darken-4 text-shadow center-align modal-trigger">
+                    <strong>Delete</strong>
+                </a>
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h3><strong>WARNING! Delete Set?</strong></h3>
+                        <h4>This cannot be undone!</h4>
+                        <p>Are you sure you would like to delete this set?</p>
                     </div>
-                    <div class="card-action">
-                        <a href="{{ url_for('edit_set', set_id=set._id) }}" class="btn-large cyan lighten-5 accent-3
-                            blue-grey-text text-darken-4 text-shadow center-align">
-                                <strong>Edit</strong>
-                        </a>
-                        <a href="{{ url_for('delete_set', set_id=set._id) }}" class="btn-large cyan lighten-5 accent-3
-                            blue-grey-text text-darken-4 text-shadow center-align">
-                                <strong>Delete</strong>
-                        </a>
+                    <div class="modal-footer">
+                        <a href="{{ url_for('delete_set', set_id=set._id) }}" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                     </div>
                 </div>
             </div>
-        {% endif %}
+        </div>
+    </div>
+    {% endif %}
     {% endfor %}
 </div>
 
