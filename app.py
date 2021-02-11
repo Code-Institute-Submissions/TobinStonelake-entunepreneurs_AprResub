@@ -55,7 +55,7 @@ def register():
         '''Put the new user into 'session' cookie.'''
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
-        return render_template(url_for("profile", username=session["user"]))
+        return render_template("tracks.html", username=session["user"])
 
     return render_template("register.html")
 
@@ -70,12 +70,12 @@ def login():
         if existing_user:
             '''Ensure hashed password matches input.'''
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(
-                        request.form.get("username")))
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
+                    request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 '''If an invalid password is put forward'''
                 flash("Incorrect Username and/or Password")
@@ -228,6 +228,12 @@ def get_sets():
     '''Allows the user to access their own sets.'''
     sets = list(mongo.db.sets.find().sort("set_name", 1))
     return render_template("sets.html", sets=sets)
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    '''Creates a custom error page'''
+    return render_template('404.html'), 404
 
 
 if __name__ == "__main__":
