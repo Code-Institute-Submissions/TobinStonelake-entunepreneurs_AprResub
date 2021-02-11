@@ -114,16 +114,16 @@ their own social media and other media platforms.
         they wish to input into the site.
     * On the relevant Edit pages, the User has the opportunity to edit any data that they
         they have input into the site.
-    * The Logout function allows a user to cancel their interaction with the site.
+    * The Logout function allows a User to cancel their interaction with the site.
+    * The custom 404 page allows the User to go back to whichever page they were seeking,
+        while conforming to the general aesthetic across the site.
 
 ### Features left to implement
 
-* In the future I would like to also include links to a YouTube channel and look at their 
-    developer tools to see if a 'Widget', similar to that of the Facebook one that can
-    be found on the Homepage, or whether it can be embedded and automatically updated by
-    their developer tools alone.
-* I also would have liked to have included bespoke custom markers, that give a little more 
-    information on the Google Map, but I have not been able to figure this out effectively. 
+* In the future the author would like to look into implementing embeddable links when
+    track previews or sets are uploaded to sites such as Soundcloud and YouTube.
+* I also would have liked to have a devoted profile page that Users can access to delete
+    their account and all tied data, if they wish.
 
 ## Technologies Used
 
@@ -132,6 +132,8 @@ their own social media and other media platforms.
 * [HTML 5](https://en.wikipedia.org/wiki/HTML5)
 * [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+* [Jinja](https://en.wikipedia.org/wiki/Jinja_(template_engine))
 
 ### Frameworks, Libraries & Programs Used
 
