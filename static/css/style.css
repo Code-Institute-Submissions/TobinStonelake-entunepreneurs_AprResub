@@ -59,8 +59,8 @@ footer {
 }
 
 .btn-small {
-    margin: 5px;
-    width: 75px;
+    margin: 4px;
+    width: 65px;
     font-family: 'Pathway Gothic One', sans-serif;
     font-weight: 600;
     font-size: medium;
@@ -88,6 +88,12 @@ li {
 }
 
 li strong {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.error {
     font-family: 'Pathway Gothic One', sans-serif;
     font-weight: 700;
     letter-spacing: 2px;
