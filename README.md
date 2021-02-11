@@ -97,7 +97,7 @@ their own social media and other media platforms.
     * [Wireframe](README_files/milestone_3.pdf)
 
 * Database Diagram
-    *
+    * [Diagram](README_files/entunepreneursDBlink.pdf) or here to see the live version [Live](https://dbdiagram.io/d/6024290380d742080a3a0a69)
 
 ## Features
 
@@ -106,16 +106,15 @@ their own social media and other media platforms.
 * Interactive elements:
     * The driving goal of this site was to allows users to input data that is relevant to
         their musical endeavours.
-    * On the Homepage, the User can interact with *Jig & Thonic's* Facebook page,
-        through a 'Widget' provided by Elfsight.            
-    * On the Tracks page, the User can access songs and recorded mixes, created by the author,
-        that have been uploaded to Soundcloud. This allows the User to keep up to date with
-        the latest content that has been uploaded to Soundcloud.
-    * On the Events page, a number of fictitious events have been marked on an embedded 
-        Google Map. Details towards each event can be found below.
-    * The contact page utilises EmailJSs API so that Users can send queries and automatically
-        receive a response, informing the User of the timescale in which a response will be 
-        given and thanks for contacting *Jig & Thonic*.
+    * On the Homepage, the User can view all and search through all sets that are available.
+        Once logged in, the User also has the opportunity to amend sets and tracks they have uploaded.           
+    * On the Register page, the User can create an account, giving them the ability to fully 
+        interact with the site.
+    * On the relevant Add pages, the User has the opportunity to add any data that they
+        they wish to input into the site.
+    * On the relevant Edit pages, the User has the opportunity to edit any data that they
+        they have input into the site.
+    * The Logout function allows a user to cancel their interaction with the site.
 
 ### Features left to implement
 
