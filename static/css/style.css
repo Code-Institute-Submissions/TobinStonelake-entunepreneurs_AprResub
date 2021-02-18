@@ -1,15 +1,19 @@
+/* Sets the font for the Navbar logo */
 .brand-logo {
     font-family: 'Righteous', cursive; 
 }
 
+/* Applies text shadow criteria */
 .text-shadow {
     text-shadow: 2px, 2px, 2px, rgb(255, 255, 255, 0.5);
 }
 
+/* Determines the height of Flash messages */
 .flashes h4 {
     line-height: 2;
 }
 
+/* Assigns the Nav link text their appropriate colour */
 nav ul li a{
   color: #00e5ff;
 }
@@ -17,7 +21,9 @@ nav ul li a{
 .sidenav li a{
   color: #00e5ff;
 }
+/* Navbar Text Colour end*/
 
+/* Materialize CSS to ensure background image is responsive and functions correctly */
 body {
   display: flex;
   min-height: 100vh;
@@ -34,7 +40,9 @@ body {
  background-repeat: no-repeat;
  background-size: cover;
 }
+/* Background image finish */
 
+/* Sets the font and style for each page header */
 h1 {
     color: #00e5ff;
     text-shadow: 10px, 10px, 10px, rgba(255, 255, 255, 0);
@@ -44,12 +52,13 @@ h1 {
     letter-spacing: 3px;
 }
 
+/* Styling to ensure footer is cohesive to the site design */
 footer {
     margin-top: 30px;
     font-family: 'Righteous', cursive; 
 }
 
-
+/* Eliminates unnecessary spacing between accordion levels */
 .row {
     margin-bottom: 0px;
 }
@@ -57,7 +66,9 @@ footer {
 .collapsible {
     border: none;
 }
+/* Finish of spacing issue */
 
+/* Formats buttons to look appropriate across all devices*/
 .btn-small {
     margin: 4px;
     width: 65px;
@@ -71,7 +82,9 @@ form btn-large {
     font-weight: 700;
     font-size: medium;
 }
+/* Finish of button formatting */
 
+/* Sets the font family and style for input fields on forms and their display to the User */
 .input-field {
     font-family: 'Pathway Gothic One', sans-serif;
 }
@@ -92,7 +105,9 @@ li strong {
     font-weight: 700;
     letter-spacing: 2px;
 }
+/* Finish of form styling */
 
+/* Style for custom error page */
 .error {
     font-family: 'Pathway Gothic One', sans-serif;
     font-weight: 700;

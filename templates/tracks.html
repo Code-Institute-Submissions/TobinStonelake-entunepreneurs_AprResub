@@ -3,6 +3,7 @@
 
     <h1 class="center-align">Sets</h1>
 
+    <!--Search function for searching through User uploaded sets-->
     <div class="row center-align cyan-text lighten-5 text-shadow blue-grey darken-3">
         <div class="col s12 m12 l10 offset-l1">
             <form action=" {{ url_for('search') }}" method="post">
@@ -27,6 +28,7 @@
         </div>
     </div>
 
+    <!--Showcase of User's playlists and sets. Presented via various levels of collapsible accordians-->
     {% if sets|length > 0 %}
     <div class="row">
         <div class="col s12 m12 l10 offset-l1">
@@ -57,6 +59,7 @@
                                     blue-grey-text text-darken-4 text-shadow center-align">
                                     <strong>Edit</strong>
                                 </a>
+                                <!--Warning Modal before User deletes their content-->
                                 <a href="#modal1" class="btn-small cyan lighten-5 accent-3
                                     blue-grey-text text-darken-4 text-shadow center-align modal-trigger">
                                     <strong>Delete</strong>
@@ -79,6 +82,7 @@
                             {% endif %}
                         </div>
                     </div>
+                    <!--Inner accordion displaying User's uploaded tracks and their info-->
                     <div class="collapsible-body blue-grey darken-3">
                         <ul class="collapsible" data-collapsible="accordion">
                             {% for track in tracks %}
@@ -101,6 +105,7 @@
                                     blue-grey-text text-darken-4 text-shadow center-align">
                                     <strong>Edit</strong>
                                 </a>
+                                <!--Warning Modal before User deletes their content-->
                                 <a href="#modal2" class="btn-small cyan lighten-5 accent-3
                                     blue-grey-text text-darken-4 text-shadow center-align modal-trigger">
                                     <strong>Delete</strong>

@@ -1,8 +1,14 @@
+//Various enablers for Materialize's functions.
 $(document).ready(function () {
+    //Sidenav enabler
     $(".sidenav").sidenav({edge: "right"});
+    //Collapsible accordion enabler
     $('.collapsible').collapsible();
+    //Allows for selection in from dropdowns
     $("select").formSelect();
+    //Triggers the warning modal when a user tries to delete content
     $('.modal').modal();
+    //Enables the datepicker function
     $(".datepicker").datepicker({
         format: "dd mmmm, yyyy",
         yearRange: 3,
@@ -13,6 +19,7 @@ $(document).ready(function () {
     });
     
 
+    //Validation enabler for Materialize
     validateMaterializeSelect();
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
