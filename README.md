@@ -2,7 +2,7 @@
 
 [View the live website here](https://entunepreneurs.herokuapp.com/)
 
-![Homepage](README_files/README_images/indexresp.png)
+![Homepage](README_files/README_images/mainpage.png)
 
 This is the third Milestone Project for the 
 Code Institute's Full Stack Developer course.
