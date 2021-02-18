@@ -137,8 +137,6 @@ their own social media and other media platforms.
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Bootstrap 4.5:](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
-    - Bootstrap was used to assist with the responsiveness and styling of the website.
 1. [Google Fonts:](https://fonts.google.com/)
     - Google fonts were used to import the 'Lily Script One' and 'Yanone Kaffeesatz' fonts into the style.css file which is used on all pages throughout the project.
 1. [Font Awesome:](https://fontawesome.com/)
@@ -149,25 +147,12 @@ their own social media and other media platforms.
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub.
 1. [GitHub:](https://github.com/)
     - GitHub is used to store the project's code after being pushed from Git.
-1. [GoogleMaps:](https://developers.google.com/maps/documentation/javascript/overview)
-    - Google Maps has been implemented to show the User where a number of fictitious events are
-        taking place and highlight the author's ability to use JavaScript to create custom, marked locations. 
-1. [EmailJS:](https://www.emailjs.com/)
-    - EmailJS has been implemented to allow for an automated emailing service and contact form. This allows
-        User's to easily contact the author and be provided with an automated response upon sending their request.
-1. [Soundcloud:](https://www.soundcloud.com)
-    - Soundcloud has been used to embed the author's tracks and recordings, which will be updated as the author
-        updates each respective playlist.
-1. [Elfsight:](https://elfsight.com/)
-    - Elfsight's Facebook 'Widget' was used to create further interactivity on the Homepage. This was chosen due
-        to the nature of the website wanting to be consistently updated across all other relevant sites that are
-        attached to *Jig & Thonic*.
-1. [Canva:](https://www.canva.com/)
-    - Canva has been used to create any logos or images that include *Jig & Thonic*.
 1. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the [wireframes](https://en.wikipedia.org/wiki/Website_wireframe) during the design process.
 1. [Microsoft Word:](https://www.microsoft.com/en-gb/microsoft-365/word)
-    - Was used to write the content and ensure that the grammatical nature of the content was preserved.    
+    - Was used to write the content and ensure that the grammatical nature of the content was preserved.
+1. [Materialize](https://materializecss.com/)
+    - Was used for styling and ensure that the site's functions correctly.
 
 ## Testing
 
