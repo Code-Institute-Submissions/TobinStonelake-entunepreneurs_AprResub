@@ -167,21 +167,21 @@ their own social media and other media platforms.
 	of other User’s or acts that I am interested in.
 
     1. On the Hompage, an accordion for each ste or playlist can be found, with a search function also included.
-         [Homepage Screenshot](assets/README_files/README_images/userstory1evidence.png)
+         [Homepage Screenshot](README_files/README_images/userstory1evidence.png)
 
     1. As a First Time Visitor, I want to be able to easily sign up and create my own
         libraries.
 
-        1. The register page easily allows for User's to create their own accounts. [Register Screenshot](assets/README_files/README_images/registerevidence.png)
-        2. Sets are easily created via a User inputted form, saving to MongoDB  [New Set Screenshot](assets/README_files/README_images/newsetevidence.png)
+        1. The register page easily allows for User's to create their own accounts. [Register Screenshot](README_files/README_images/registerevidence.png)
+        2. Sets are easily created via a User inputted form, saving to MongoDB  [New Set Screenshot](README_files/README_images/newsetevidence.png)
                 
 
     1. As a First Time Visitor, I want to be able to have CRUD capabilities when 
         creating my library.
 
-        1. Once logged in, the User can easily edit, create and delete their own libaries. [CRUD Screenshot](assets/README_files/README_images/crudevidence.png)
+        1. Once logged in, the User can easily edit, create and delete their own libaries. [CRUD Screenshot](README_files/README_images/crudevidence.png)
         2. The same is true for their own tracks, as seen as by the former screenshot and this edit page.
-        [Edit Tracks Screenshot](assets/README_files/README_images/edittracksevidence.png) 
+        [Edit Tracks Screenshot](README_files/README_images/edittracksevidence.png) 
 
 * Returning and Frequent Visitor Goals
     1. As a Returning or Frequent Visitor, I want to be able to amend, edit and delete 
@@ -192,12 +192,12 @@ their own social media and other media platforms.
     1. As a Returning or Frequent Visitor, I want to be able to easily search other User’s
         databases to see similarities or differences between my own ideas and their own.
 
-        1. This can be achieved by the Search function on the homepage. [Search Screenshot](assets/README_files/README_images/searchevidence.png)
+        1. This can be achieved by the Search function on the homepage. [Search Screenshot](README_files/README_images/searchevidence.png)
 
     1. As a Returning or Frequent Visitor, I want a singular portal where all of the songs I
         wish to listen to, find and purchase can be easily accessed, from anywhere. 
 
-        1. This can be achieved by the viewing songs accordion dropdown [Tracks Accordion Screenshot](assets/README_files/README_images/songaccess.png)
+        1. This can be achieved by the viewing songs accordion dropdown [Tracks Accordion Screenshot](README_files/README_images/songaccess.png)
 
 * Site Owner Goals
     1. The Site Owner's goal is to utilise digital platforms, to amass trends within
@@ -212,7 +212,7 @@ their own social media and other media platforms.
         1. By the very nature of a comprehensive list of their playlists and ordering, the Site Owner has a portal to view and revisit sets they have made in
             the past.
         2. By including the local file directory, it makes it easy to find songs that may have been lost within the myriad
-            of files and disorganisation that is prevalent in the digital age and using multiple storage devices. [Directory Screenshot](assets/README_files/README_images/directoryevidence.png)
+            of files and disorganisation that is prevalent in the digital age and using multiple storage devices. [Directory Screenshot](README_files/README_images/directoryevidence.png)
 
     1. The Site Owner wants to add to the ever-growing list of 3rd-party sites that
         help to promote the services of content producers and are easily linkable within
