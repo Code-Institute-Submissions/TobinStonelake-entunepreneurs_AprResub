@@ -269,9 +269,9 @@ Due to the nature of using Jinja Templating, the author felt it uncessarry to in
 
 ## Deployment
 
-### GitHub Pages
+### Heroku
 
-The project was deployed to GitHub Pages using the following steps...
+The project was deployed to Heroku using the following steps (which can be found here) [Heroku Deployment](https://blog.heroku.com/six-strategies-deploy-to-heroku)...
 
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
 2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
@@ -319,13 +319,11 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Content
 
-All content has been written or created by the author. This includes all
-music, images and text found across the site. 
+All content has been written or created by the author.
 
 ### Media
 
-Any media that has been used across the site has either been created by
-the author, on Reason Studios or with Canva.
+The only media used is from [PixaBay](https://pixabay.com/), where the backgroudn image can be found via this link [Background Image](https://pixabay.com/photos/people-crowd-concert-show-691777/)
 
 ### Acknowledgements
 
@@ -336,13 +334,10 @@ and conveying that they can view the content and access the interactive function
 during the creation of this project.
 
 * I have utilised extra information to allow me to create this page from
-Bootstrap's documentation, the relevant developer tools from each site, and articles that can be found on W3. 
+Materialize's documentation and articles that can be found on W3. 
 
 * For minor issues, I have read through the Code Institute's material, 
 its Slack channels and, as a last resort, forum posts in Stack Overflow.
 
-* To standardise the formatting of my HTML and CSS code, I used https://www.freeformatter.com/html-formatter.html#ad-output and https://www.freeformatter.com/css-beautifier.html#ad-output
-
-#### Port Used To View Real-Time Edits
-
-python3 -m http.server
+* I'd like to acknowledge this [Link](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/).
+    For showing me how to create custom error pages.
