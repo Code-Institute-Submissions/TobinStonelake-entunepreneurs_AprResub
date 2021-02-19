@@ -233,11 +233,7 @@ functions across devices that I do not have access to.
 was responsive, followed its theme and was as visually appealing
 and useable across all devices.
 
-* My largest issue has been with the footer image. This required several tweaks
-to ensure that the footer looked and responded well across all media queries.
-
-* EmailJS has been tested and deployed on the site as it works as expected. Emails
-can be sent and an auto-reply is received.
+* Tested creating multiple accounts and creating, updating and deleting data where necessary. 
 
 * Checked all links across all pages lead to the relevant pages.
 
@@ -245,67 +241,31 @@ can be sent and an auto-reply is received.
 
 ### Further Testing
 
-* The font size may need to be tweaked to ensure that readability is preserved across all
-devices.
+* Ensure that users can access the set information and corroborating tracks that they search for.
 
 ### Known Issues
 
 * There are some final little aesthetic issues that I would like to fix:
-    * The footer copyright text can become a tad too small when viewed on certain devices.
-    * Text can appear quite large on smaller devices.
-    * On some devices, the Contact Page footer image is very large.
+    * The buttons can sometimes overlap the accordion card when viewed on small devices. 
+    * Text can appear quite small on the Navbar when viewed on larger devices.
 
-* The Products page, as seen by previous commits,
-seems to double up when adding to the basket at the bottom. Due to tutor support, this page
-has been omitted as it was informed that this would be a criterion for a future project and
-be a smoother feature to add once the relevant languages and skills have been learnt.
-Created by referring to this video: https://www.youtube.com/watch?v=YeFzkC2awTM
+* My largest issue has been with logging in, for a reason unknown to the author, it brings you to a blank search page on the homepage. 
 
 ### Screenshots across different devices
 
-#### Homepage/Index
-![Homepage](assets/README_files/README_images/indexresp.png)
+**Disclaimer: Due to the nature of most content only viewable after logging in, it has proven difficult to provide visual evidence of each screenshot, so please refer to the homepage image.**
 
-#### Tracks
-![Tracks Page](assets/README_files/README_images/tracksresp.png)
-
-#### Events
-![Events Page](assets/README_files/README_images/eventsresp.png)
-
-#### Contact
-![Contact Page](assets/README_files/README_images/contactresp.png)
+#### Homepage
+![Homepage](README_files/README_images/mainpage.png)
 
 ### W3 Validators
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page. 
-This led to a number of errors being present and resolutions needed to overcome said issues.
-Evidence of these tests can be found below:
-
-* As a side note, at the time of writing I had two errors that were unable to be fixed until
-assurance is provided by my mentor or student support. One is that I get an error due to the
-use of the type attribute when linking JavaScript resources. The other is that I get a failure
-on the tracks page due to the embedded styling found on the Soundcloud players. It notes that 
-this should be in the CSS folder.
+Due to the nature of using Jinja Templating, the author felt it uncessarry to include HTML validators as they came up with a host of errors.
+    Please find the CSS validator included below.
 
 #### CSS
 
-![CSS Test](assets/README_files/README_images/cssvalid.png)
-
-#### Index HTML
-
-![Index Test](assets/README_files/README_images/indexvalid.png)
-
-#### Tracks HTML
-
-![Tracks Test](assets/README_files/README_images/tracksvalid.png)
-
-#### Events HTML
-
-![Events Test](assets/README_files/README_images/eventsvalid.png)
-
-#### Contact HTML
-
-![Contact Test](assets/README_files/README_images/contactvalid.png)
+![CSS Test](/README_files/README_images/cssvalidator.png)
 
 ## Deployment
 
