@@ -273,13 +273,19 @@ Due to the nature of using Jinja Templating, the author felt it uncessarry to in
 
 The project was deployed to Heroku using the following steps (which can be found here) [Heroku Deployment](https://blog.heroku.com/six-strategies-deploy-to-heroku)...
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
+1. Log in to Heroku and select 'Create New App'
+2. You are then presented with the ability to name your app, which is what creates the URL and must be unique.
+3. Select the region that is closest to yourself, once selected, click 'Create App'.
+4. On the 'Deployment method' section click on the GitHub 'Connect to GitHub' option.
+5. Search for your repository using its name with the Heroku Search function, once found, click 'Connect' to connect the repository from GitHub to Heroku.
+6. You then need to select the 'Settings' tab and find the 'Reveal Config Vars' button.
+7. Upon clicking the 'Reveal Config Vars' button, input the appropriate IP, PORT, SECRET_KEY, MONGO_URI and MONGO_DBNAME fields,
+    with their relevant data from the env.py file.
+8. Due to the creation of the Procfile and the requirements.txt file, we can select the 'Enable Automatic Deploys' button to ensure any changes pushed to
+    GitHub are also synchronised with Heroku.
+9. As there is only one branch, we can select the 'Deploy Branch' button to ensure Heroku receives changes from GitHub.
+10. Once this is selected, you should see Heroku building our app and a 'Your app was successfully deployed' message should appear.
+11. Simply click 'View' below this to view your live website.
 
 ### Forking the GitHub Repository
 
@@ -323,7 +329,7 @@ All content has been written or created by the author.
 
 ### Media
 
-The only media used is from [PixaBay](https://pixabay.com/), where the backgroudn image can be found via this link [Background Image](https://pixabay.com/photos/people-crowd-concert-show-691777/)
+The only media used is from [PixaBay](https://pixabay.com/), where the background image can be found via this link [Background Image](https://pixabay.com/photos/people-crowd-concert-show-691777/)
 
 ### Acknowledgements
 
