@@ -153,6 +153,8 @@ their own social media and other media platforms.
     - Was used to write the content and ensure that the grammatical nature of the content was preserved.
 1. [Materialize](https://materializecss.com/)
     - Was used for styling and ensure that the site's functions correctly.
+1. [MongoDB](https://www.mongodb.com/)
+    - Was used to host the data that forms the database and allows the User to input their own data and use CRUD function to amend and create said data.
 
 ## Testing
 
@@ -161,99 +163,63 @@ their own social media and other media platforms.
 **Disclaimer: All testing screenshots can be found after the relevant entry via a link.**
 
 * First Time Visitor Goals
-    1. As a First Time Visitor, I want to be able to hear the abilities
-        of *Jig & Thonic* and reach their predominant social sites easily.
+    1. As a First Time Visitor, I want to be able to access setlists and libraries
+	of other User’s or acts that I am interested in.
 
-        1. On the Hompage, a Facebook Widget has been included. This includes the latest 
-        posts by *Jig & Thonic* and their recordings and events. [Facebook Widget Screenshot](assets/README_files/README_images/facebookwidget.png)
-        2. On the Tracks page, embedded Soundcloud players are included. 
-        Allowing User's to easily reach the predominant platform where *Jig & Thonic* upload
-        their music. [Player Screenshot](assets/README_files/README_images/tracksimg.png)
-        3. At the Footer on each page, links to the relevant social sites can be easily found.
-        Utilising the icons of both sites to indicate where the User will be visiting. [Footer Social Screenshot](assets/README_files/README_images/socialimg.png)
+    1. On the Hompage, an accordion for each ste or playlist can be found, with a search function also included.
+         [Homepage Screenshot](assets/README_files/README_images/userstory1evidence.png)
 
-    1. As a First Time Visitor, I want to be able to have access to the content
-        produced by *Jig & Thonic* on one site, without having to visit several
-        different sites.
+    1. As a First Time Visitor, I want to be able to easily sign up and create my own
+        libraries.
 
-        1. The Navigation bar on each page clearly and distinctly leads the User to the relevant
-        page that they are looking for. [Navbar Screenshot](assets/README_files/README_images/navbarimg.png)
-        2. The benefit of using the Facebook widget and the Soundcloud embedded players is that it
-        give User's the latest updates without any extra coding required across this page. Therfore,
-        this aim is reached through their implementation. *Refer to above Facebook widget screenshot and the Player screenshot.
-        3. By creating a centralised hub of *Jig & Thonic's* activity, it achieves this aim well and
-        allows Users to also easily contact the author. Either through the contact form or their preferred social
-        media avenue.  [Contact Form Screenshot](assets/README_files/README_images/contactimg.png)
+        1. The register page easily allows for User's to create their own accounts. [Register Screenshot](assets/README_files/README_images/registerevidence.png)
+        2. Sets are easily created via a User inputted form, saving to MongoDB  [New Set Screenshot](assets/README_files/README_images/newsetevidence.png)
+                
 
-    1. As a First Time Visitor, I want to be able to easily contact *Jig & Thonic*
-        with queries and ensure that a response will be given back within a declared
-        timeframe.
+    1. As a First Time Visitor, I want to be able to have CRUD capabilities when 
+        creating my library.
 
-        1. The Contact page utilises EmailJS, which sends an automated response to the user 
-        once their query has been submitted.   [Auto-reply Screenshot](assets/README_files/README_images/emailjsautoreply.png)
-        2. The timeframe is declared on both the auto-reply and on the contact page itself.
-        [Auto-reply Screenshot](assets/README_files/README_images/contactnotice.png) 
+        1. Once logged in, the User can easily edit, create and delete their own libaries. [CRUD Screenshot](assets/README_files/README_images/crudevidence.png)
+        2. The same is true for their own tracks, as seen as by the former screenshot and this edit page.
+        [Edit Tracks Screenshot](assets/README_files/README_images/edittracksevidence.png) 
 
 * Returning and Frequent Visitor Goals
-    1. As a Returning or Frequent Visitor, I want to be able to view the progression of the author's work.
-        Periodically and dynamically.
+    1. As a Returning or Frequent Visitor, I want to be able to amend, edit and delete 
+        songs from my playlists and the playlists themselves.
 
-        1. As the user returns to the site, the site will be updated with *Jig & Thonic's* latest
-        news, events and recordings.
+        1. these two functions can be seen by the above two screenshots and declaration.
 
-    1. As a Returning or Frequent Visitor, I want to be able to easily contact the author to be able to 
-        collaborate and gain any extra information that they would like.
+    1. As a Returning or Frequent Visitor, I want to be able to easily search other User’s
+        databases to see similarities or differences between my own ideas and their own.
 
-        1. There is a contact page that can be easily accessed from the navigation bar.
-        2. The use of EmailJS ensures that the User's request is easily highlighted to the author
-        and ensures that they will be responded to.
-        3. A necessary caveat of being successful within the Club/Bar scene (the author's preferred setting),
-        is that they are easily reachable to improve the employability prospects within this sector.
+        1. This can be achieved by the Search function on the homepage. [Search Screenshot](assets/README_files/README_images/searchevidence.png)
 
-    1. As a Returning or Frequent Visitor, I want a singular portal where all of *Jig & Thonic's*
-        material can be found and, thus, easily shared between others. 
+    1. As a Returning or Frequent Visitor, I want a singular portal where all of the songs I
+        wish to listen to, find and purchase can be easily accessed, from anywhere. 
 
-        1. The nature of the modern world and its increased use of mobile technology means that a singular 
-        hub is more important than ever. This ensures that a User has an easy to reach platform and does not
-        require them to jump across multiple apps or pages to reach all of *Jig & Thonic's* content.
-        2. Because of this singular, centralised hub of content. Users can easily share the page to
-        others who may be interested in the site or conveyed their interest towards *Jig & Thonic*, via one link.
+        1. This can be achieved by the viewing songs accordion dropdown [Tracks Accordion Screenshot](assets/README_files/README_images/songaccess.png)
 
 * Site Owner Goals
-    1. The Site Owner's goal is to utilise digital platforms, particularly
-        Social Media and other user-focused Content/Media sites to create
-        a hub in which all of the promotional material can be found on one
-        site.
+    1. The Site Owner's goal is to utilise digital platforms, to amass trends within
+	    other User’s data and gain further insights into what other like-minded
+	    visitors are visiting the site for.
 
-        1. This aim is reached by the provision of the relevant developer tools from each site and their implementation.
-        2. By using cross-platform services, the Site Owner has the ability to cater these tools themselves.
-        As mentioned in the CSS, the Facebook widget had to be stylised within their own environment. This is indicated 
-        through the following screenshot and achieved by using the inspect element tool on Google Chrome. 
-        [Elfsight CSS Screenshot](assets/README_files/README_images/elfsightcustomisation.png) 
+        1. By being able to search the sets database and view each track, the Site Owner can view these trends and similarities. 
 
-    1. The Site Owner's goal will be to improve their ability 
-        to be competitive within the dynamic and saturated DJ 
-        market. This will be achieved by making contact easy and, as
-        aforementioned, reach their other sites easily.
+    1. The Site Owner's goal will be to improve their ability to keep track of their
+        own collections and wishlists.
 
-        1. By the use of a centralised hub, the author can easily showcase any and all work
-        that has gone into *Jig & Thonic*. This makes it easy for prospective clients to gain an indication
-        of their abilities and make an informed decision towards the viability of *Jig & Thonic* for their needs.
-        2. Because of this, it saves both the client and *Jig & Thonic* time in ensuring that an efficient
-        and effective service is delivered. Backed by the use of social media to indicate their presence and as a
-        portfolio of work.
-        3. By using an automated email service, clients can easily contact the author to create a correspondence.
-        This greatly improves the financial prospects towards their service becoming used. 
+        1. By the very nature of a comprehensive list of their playlists and ordering, the Site Owner has a portal to view and revisit sets they have made in
+            the past.
+        2. By including the local file directory, it makes it easy to find songs that may have been lost within the myriad
+            of files and disorganisation that is prevalent in the digital age and using multiple storage devices. [Directory Screenshot](assets/README_files/README_images/directoryevidence.png)
 
-    1. The Site Owner's want to promote themselves effortlessly and 
-        effectively, via the use of a centralised website.
+    1. The Site Owner wants to add to the ever-growing list of 3rd-party sites that
+        help to promote the services of content producers and are easily linkable within
+        their own social media and other media platforms.   
 
-        1. This is the main focal point of the site's creation. Once the author's skillset has been further
-        developed and extra content is created and uploaded to sites such as YouTube, Spotify and Mixcloud,
-        the author will also implement these via their respective development tools.
-        2. This can also be said for a shopping basket with different services that can be offered. For the
-        moment, the author was advised to wait until their skillset was further developed with the Code Institute,
-        as this will be a necessary criterion in a later module.
+        1. By adding to the various websites, such as Soundcloud, Mixcloud, Instagram and Facebook (etc), this gives
+            User's another means to add to their promotional links.
 
 ### Achieved Testing
 
