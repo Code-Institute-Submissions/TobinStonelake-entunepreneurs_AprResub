@@ -32,7 +32,8 @@ def search():
     '''Allows users to search playlists to find the artists they like.'''
     query = request.form.get("query")
     sets = list(mongo.db.sets.find({"$text": {"$search": query}}))
-    return render_template("tracks.html", sets=sets)
+    tracks = list(mongo.db.tracks.find())
+    return render_template("tracks.html", sets=sets, tracks=tracks)
 
 
 @app.route("/register", methods=["GET", "POST"])
