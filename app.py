@@ -231,7 +231,9 @@ def get_sets():
     return render_template("sets.html", sets=sets)
 
 
-'''Highlighted by mentor via this link https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/ '''
+'''Via the link found in the README '''
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     '''Creates a custom error page'''
