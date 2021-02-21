@@ -17,11 +17,11 @@ As well as further developing our skills to what is
 expected of a Full Stack Developer and to an industry standard.
 
 As per the standard of Responsive Design, this site is
-responsive across a number of devices, making sure to 
+responsive across several devices, making sure to 
 be structured in a cohesive manner and change designs
 when appropriate. To further achieve this goal, the site
 utilises Materialize and MongoDB, aiding its design and performance 
-to shape a site that functions seamlessly across a number of devices,
+to shape a site that functions seamlessly across several devices,
 utilises User-input data and broaden the skills and knowledge of the author.
 
 This site, *Entunepreneurs*, allows DJs, Music snobs and the general
@@ -44,29 +44,29 @@ in some cases, making it easy to forget songs that are heard elsewhere.
 
 * First Time Visitor Goals
     1. As a First Time Visitor, I want to be able to access setlists and libraries
-	of other User’s or acts that I am interested in.
-1.	As a First Time Visitor, I want to be able to easily sign up and create my own
+    of other User’s or acts that I am interested in.
+1.  As a First Time Visitor, I want to be able to easily sign up and create my own
 libraries.
-1.	As a First Time Visitor, I want to be able to have CRUD capabilities when 
+1.  As a First Time Visitor, I want to be able to have CRUD capabilities when 
 creating my library.
 
 * Returning and Frequent Visitor Goals
     1. As a Returning or Frequent Visitor, I want to be able to amend, edit and delete 
 songs from my playlists and the playlists themselves.
-1.	As a Returning or Frequent Visitor, I want to be able to easily search other User’s
-databases to see similarities or differences between my own ideas and their own.
-1.	As a Returning or Frequent Visitor, I want a singular portal where all of the songs I
+1.  As a Returning or Frequent Visitor, I want to be able to easily search other User’s
+databases to see similarities or differences between my ideas and their own.
+1.  As a Returning or Frequent Visitor, I want a singular portal where all of the songs I
 wish to listen to, find and purchase can be easily accessed, from anywhere.
 
 * Site Owner Goals
     1. The Site Owner's goal is to utilise digital platforms, to amass trends within
-	other User’s data and gain further insights into what other like-minded
-	visitors are visiting the site for.
-1.	The Site Owner's goal will be to improve their ability to keep track of their
+    other User’s data and gain further insights into what other like-minded
+    visitors are visiting the site for.
+1.  The Site Owner's goal will be to improve their ability to keep track of their
 own collections and wishlists.
-1.	The Site Owner wants to add to the ever-growing list of 3rd-party sites that
+1.  The Site Owner wants to add to the ever-growing list of 3rd-party sites that
 help to promote the services of content producers and are easily linkable within
-their own social media and other media platforms. 
+their social media and other media platforms. 
 
 ### Design
 
@@ -83,7 +83,7 @@ their own social media and other media platforms.
     * Three fonts have been used across the site. 'Righteous' is the brand font 
         used throughout the website this sets the brand logo and footer to be cohesive.
     * For the h1 tags, 'Alfa Slab One' has been used due to its boldness and dominating
-        apperance over the background image. Using cursive as a fallback.
+        appearance over the background image. Using cursive as a fallback.
     * For the main text throughout the site, 'Pathway Gothic One' has been used.
         This is a *serious* font that adheres to the conventions of dance-music sites and
         their uniformed aesthetic. This clearly defines head elements as being separate 
@@ -106,7 +106,7 @@ their own social media and other media platforms.
 * Interactive elements:
     * The driving goal of this site was to allows users to input data that is relevant to
         their musical endeavours.
-    * On the Homepage, the User can view all and search through all sets that are available.
+    * On the Homepage, the User can view all and search through all available sets.
         Once logged in, the User also has the opportunity to amend sets and tracks they have uploaded.           
     * On the Register page, the User can create an account, giving them the ability to fully 
         interact with the site.
@@ -133,7 +133,6 @@ their own social media and other media platforms.
 * [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 * [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
-* [Jinja](https://en.wikipedia.org/wiki/Jinja_(template_engine))
 
 ### Frameworks, Libraries & Programs Used
 
@@ -154,7 +153,11 @@ their own social media and other media platforms.
 1. [Materialize](https://materializecss.com/)
     - Was used for styling and ensure that the site's functions correctly.
 1. [MongoDB](https://www.mongodb.com/)
-    - Was used to host the data that forms the database and allows the User to input their own data and use CRUD function to amend and create said data.
+    - Was used to host the data that form the database and allows the User to input their data and use the CRUD functions to amend and create said data.
+1. [Jinja](https://en.wikipedia.org/wiki/Jinja_(template_engine))
+    - Allows for template functionality, working alongside Python code and performing various functions to ensure the User only sees what they need to. 
+1. [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework))
+    - Helps to support other applications that ensure the site functions correctly.
 
 ## Testing
 
@@ -164,23 +167,23 @@ their own social media and other media platforms.
 
 * First Time Visitor Goals
     1. As a First Time Visitor, I want to be able to access setlists and libraries
-	of other User’s or acts that I am interested in.
+    of other User’s or acts that I am interested in.
 
-    1. On the Hompage, an accordion for each ste or playlist can be found, with a search function also included.
+    1. On the Hompage, an accordion for each set or playlist can be found, with a search function also included.
          [Homepage Screenshot](README_files/README_images/userstory1evidence.png)
 
     1. As a First Time Visitor, I want to be able to easily sign up and create my own
         libraries.
 
-        1. The register page easily allows for User's to create their own accounts. [Register Screenshot](README_files/README_images/registerevidence.png)
+        1. The register page easily allows for User's to create their accounts. [Register Screenshot](README_files/README_images/registerevidence.png)
         2. Sets are easily created via a User inputted form, saving to MongoDB  [New Set Screenshot](README_files/README_images/newsetevidence.png)
                 
 
     1. As a First Time Visitor, I want to be able to have CRUD capabilities when 
         creating my library.
 
-        1. Once logged in, the User can easily edit, create and delete their own libaries. [CRUD Screenshot](README_files/README_images/crudevidence.png)
-        2. The same is true for their own tracks, as seen as by the former screenshot and this edit page.
+        1. Once logged in, the User can easily edit, create and delete their libraries. [CRUD Screenshot](README_files/README_images/crudevidence.png)
+        2. The same is true for their tracks, as seen by the former screenshot and this edit page.
         [Edit Tracks Screenshot](README_files/README_images/edittracksevidence.png) 
 
 * Returning and Frequent Visitor Goals
@@ -190,7 +193,7 @@ their own social media and other media platforms.
         1. these two functions can be seen by the above two screenshots and declaration.
 
     1. As a Returning or Frequent Visitor, I want to be able to easily search other User’s
-        databases to see similarities or differences between my own ideas and their own.
+        databases to see similarities or differences between my ideas and their own.
 
         1. This can be achieved by the Search function on the homepage. [Search Screenshot](README_files/README_images/searchevidence.png)
 
@@ -201,30 +204,30 @@ their own social media and other media platforms.
 
 * Site Owner Goals
     1. The Site Owner's goal is to utilise digital platforms, to amass trends within
-	    other User’s data and gain further insights into what other like-minded
-	    visitors are visiting the site for.
+        other User’s data and gain further insights into what other like-minded
+        visitors are visiting the site for.
 
         1. By being able to search the sets database and view each track, the Site Owner can view these trends and similarities. 
 
     1. The Site Owner's goal will be to improve their ability to keep track of their
         own collections and wishlists.
 
-        1. By the very nature of a comprehensive list of their playlists and ordering, the Site Owner has a portal to view and revisit sets they have made in
+        1. By the very nature of a comprehensive list of their playlists and order, the Site Owner has a portal to view and revisit sets they have made in
             the past.
         2. By including the local file directory, it makes it easy to find songs that may have been lost within the myriad
             of files and disorganisation that is prevalent in the digital age and using multiple storage devices. [Directory Screenshot](README_files/README_images/directoryevidence.png)
 
     1. The Site Owner wants to add to the ever-growing list of 3rd-party sites that
         help to promote the services of content producers and are easily linkable within
-        their own social media and other media platforms.   
+        their social media and other media platforms.   
 
         1. By adding to the various websites, such as Soundcloud, Mixcloud, Instagram and Facebook (etc), this gives
-            User's another means to add to their promotional links.
+            User's other means to add to their promotional links.
 
 ### Achieved Testing
 
-* Throughout the project, I have been viewing my site across a
-number of devices. Including mobiles, tablets, a range of monitors
+* Throughout the project, I have been viewing my site across
+several devices. Including mobiles, tablets, a range of monitors
 with different ratios and utilising the inspect element capability 
 on Google Chrome to give me further insight into how the site 
 functions across devices that I do not have access to.
@@ -258,14 +261,18 @@ and useable across all devices.
 #### Homepage
 ![Homepage](README_files/README_images/mainpage.png)
 
-### W3 Validators
+### Validators
 
-Due to the nature of using Jinja Templating, the author felt it uncessarry to include HTML validators as they came up with a host of errors.
+Due to the nature of using Jinja Templating, the author felt it unnecessary to include HTML validators as they came up with a host of errors.
     Please find the CSS validator included below.
 
 #### CSS
 
 ![CSS Test](/README_files/README_images/cssvalidator.png)
+
+#### PEP8
+
+![PEP8 Test](/README_files/README_images/pep8evidence.png)
 
 ## Deployment
 
@@ -292,7 +299,7 @@ The project was deployed to Heroku using the following steps (which can be found
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
 
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+2. At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
 3. You should now have a copy of the original repository in your GitHub account.
 
 ### Making a Local Clone
@@ -333,10 +340,10 @@ The only media used is from [PixaBay](https://pixabay.com/), where the backgroun
 
 ### Acknowledgements
 
-* Thanks to my housemate, girlfriend, mother and other friends in looking at this project 
+* Thanks to my housemate, girlfriend, mother and other friends for looking at this project 
 and conveying that they can view the content and access the interactive functions on their own devices.
 
-* Thanks to my Code Institute Tutor, Mentor and Student Support team in offering me advice and support
+* Thanks to my Code Institute Tutor, Mentor and Student Support team for offering me advice and support
 during the creation of this project.
 
 * I have utilised extra information to allow me to create this page from
@@ -347,3 +354,4 @@ its Slack channels and, as a last resort, forum posts in Stack Overflow.
 
 * I'd like to acknowledge this [Link](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/).
     For showing me how to create custom error pages.
+

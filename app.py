@@ -207,7 +207,7 @@ def edit_track(track_id):
         mongo.db.tracks.update({"_id": ObjectId(track_id)}, submit)
         flash("Track Successfully Updated!")
 
-    '''Ensures the correct track is selected.'''
+    # Ensures the correct track is selected.
     track = mongo.db.tracks.find_one({"_id": ObjectId(track_id)})
     track_selector = mongo.db.tracks.find().sort("track_name", 1)
     set_selector = mongo.db.sets.find().sort("set_name", 1)
@@ -231,13 +231,17 @@ def get_sets():
     return render_template("sets.html", sets=sets)
 
 
-'''Via the link found in the README '''
-
-
+# Via the link found in the README.
 @app.errorhandler(404)
 def page_not_found(e):
     '''Creates a custom error page'''
     return render_template('404.html'), 404
+
+
+@app.errorhandler(500)
+def page_not_found2(e):
+    '''Creates a custom error page'''
+    return render_template('500.html'), 500
 
 
 if __name__ == "__main__":
