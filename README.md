@@ -252,7 +252,9 @@ and useable across all devices.
     * The buttons can sometimes overlap the accordion card when viewed on small devices. 
     * Text can appear quite small on the Navbar when viewed on larger devices.
 
-* My largest issue has been with logging in, for a reason unknown to the author, it brings you to a blank search page on the homepage. 
+* My largest issue has been with logging in, for a reason unknown to the author, it brings you to a blank search page on the homepage.
+
+* Another issue is that the ordering of songs within sets can sometimes be out of place.
 
 ### Screenshots across different devices
 
