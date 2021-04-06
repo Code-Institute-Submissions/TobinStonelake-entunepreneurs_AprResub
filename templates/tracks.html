@@ -4,22 +4,22 @@
     <h1 class="center-align">Sets</h1>
 
     <!--Search function for searching through User uploaded sets-->
-    <div class="row center-align cyan-text lighten-5 text-shadow blue-grey darken-3">
+    <div class="row center-align cyan-text lighten-5 blue-grey darken-3">
         <div class="col s12 m12 l10 offset-l1">
             <form action=" {{ url_for('search') }}" method="post">
                 <div class="valign-wrapper center-align">
                     <div class="input-field col s9 m12 l10 offset-l1">
-                        <i class="fas fa-search prefix cyan-text lighten-5 text-shadow"></i>
+                        <i class="fas fa-search prefix cyan-text lighten-5"></i>
                         <input type="text" name="query" id="query" minlength="1" class="validate" required>
                         <label for="query">Set Name and Uploaded By</label>
                     </div>
                     <div class="col s3 m6">
                         <a href="{{ url_for('get_tracks') }}" class="btn-small cyan lighten-5 accent-3
-                                blue-grey-text text-darken-4 text-shadow center-align">
+                                blue-grey-text text-darken-4 center-align">
                             Reset
                         </a>
                         <button type="submit" class="btn-small cyan lighten-5 accent-3 
-                                blue-grey-text text-darken-4 text-shadow center-align">
+                                blue-grey-text text-darken-4 center-align">
                             Search
                         </button>
                     </div>
@@ -35,44 +35,45 @@
             <ul class="collapsible" data-collapsible="accordion">
                 {% for set in sets %}
                 <li>
-                    <div class="row collapsible-header cyan-text lighten-5 text-shadow blue-grey darken-3">
+                    <div class="row collapsible-header cyan-text lighten-5 blue-grey darken-3">
                         <i class="fas fa-record-vinyl"></i>
                         <div class="col m5 s9">
                             <ul>
                                 <li><strong>Set Name:</strong> {{ set.set_name }}</li>
                                 <li><strong> Uploaded By:</strong> {{ set.uploaded_by }}</li>
-                                <li><strong> Date:</strong> {{ set.date }}</li><br>
-                                <i class="fas fa-angle-double-down"></i>
+                                <li><strong> Date:</strong> {{ set.date }}</li>
                             </ul>
+                            <br>
+                            <i class="fas fa-angle-double-down"></i>
                         </div>
                         <div class="col m5 hide-on-small-only">
                             <ul>
                                 <li><strong> Genre:</strong> {{ set.genre }}</li>
                                 <li><strong> Venue:</strong> {{ set.venue }}</li>
-                                <li><strong> Website:</strong> <a class="cyan-text lighten-5 text-shadow"
+                                <li><strong> Website:</strong> <a class="cyan-text lighten-5"
                                         href="{{ set.artists_page }}" target="_blank"><u>{{ set.artists_page }}</u></a></li>
                             </ul>
                         </div>
                         <div class="col m2 s3 center-align">
                             {% if session.user|lower == set.uploaded_by|lower %}
                                 <a href="{{ url_for('edit_set', set_id=set._id) }}" class="btn-small cyan lighten-5 accent-3
-                                    blue-grey-text text-darken-4 text-shadow center-align">
+                                    blue-grey-text text-darken-4 center-align">
                                     <strong>Edit</strong>
                                 </a>
                                 <!--Warning Modal before User deletes their content-->
                                 <a href="#modal1" class="btn-small cyan lighten-5 accent-3
-                                    blue-grey-text text-darken-4 text-shadow center-align modal-trigger">
+                                    blue-grey-text text-darken-4 center-align modal-trigger">
                                     <strong>Delete</strong>
                                 </a>
                                 <div id="modal1" class="modal">
                                     <div class="modal-content cyan lighten-5 accent-3 
-                            blue-grey-text text-darken-4 text-shadow center-align">
+                            blue-grey-text text-darken-4 center-align">
                                         <h3><strong>WARNING! Delete Set?</strong></h3>
                                         <h4>This cannot be undone!</h4>
                                         <p>Are you sure you would like to delete this set?</p>
                                     </div>
                                     <div class="modal-footer cyan lighten-5 accent-3 
-                            blue-grey-text text-darken-4 text-shadow center-align">
+                            blue-grey-text text-darken-4 center-align">
                                         <a href="{{ url_for('delete_set', set_id=set._id) }}"
                                             class="modal-close btn red">Agree</a>
                                         <a href="#!" class="modal-close btn red">Close</a>
@@ -89,36 +90,37 @@
                             {% if track.set_name == set.set_name %}
                             <li>
                                 <div
-                                    class="row collapsible-header cyan-text lighten-5 text-shadow blue-grey darken-4">
+                                    class="row collapsible-header cyan-text lighten-5 blue-grey darken-4">
                                     <div class="col s8">
                                     <i class="fas fa-music"></i><br>
                                     <ul>
                                         <li><strong>No:</strong> {{ track.track_no }}</li>
                                         <li><strong>Name:</strong> {{ track.track_name }}</li>
-                                        <li><strong>Artist Name: </strong>{{ track.artist }}</li><br>
-                                        <i class="fas fa-angle-double-down"></i>
+                                        <li><strong>Artist Name: </strong>{{ track.artist }}</li>
                                     </ul>
+                                    <br>
+                                        <i class="fas fa-angle-double-down"></i>
                                     </div>
                                     <div class="col s4">
                             {% if session.user|lower == set.uploaded_by|lower %}
                                 <a href="{{ url_for('edit_track', track_id=track._id) }}" class="btn-small cyan lighten-5 accent-3
-                                    blue-grey-text text-darken-4 text-shadow center-align">
+                                    blue-grey-text text-darken-4 center-align">
                                     <strong>Edit</strong>
                                 </a>
                                 <!--Warning Modal before User deletes their content-->
                                 <a href="#modal2-{{ track._id }}" class="btn-small cyan lighten-5 accent-3
-                                    blue-grey-text text-darken-4 text-shadow center-align modal-trigger">
+                                    blue-grey-text text-darken-4 center-align modal-trigger">
                                     <strong>Delete</strong>
                                 </a>
                                 <div id="modal2-{{ track._id }}" class="modal">
                                     <div class="modal-content cyan lighten-5 accent-3 
-                            blue-grey-text text-darken-4 text-shadow center-align">
+                            blue-grey-text text-darken-4 center-align">
                                         <h3><strong>WARNING! Delete Track?</strong></h3>
                                         <h4>This cannot be undone!</h4>
                                         <p>Are you sure you would like to delete this track?</p>
                                     </div>
                                     <div class="modal-footer cyan lighten-5 accent-3 
-                            blue-grey-text text-darken-4 text-shadow center-align">
+                            blue-grey-text text-darken-4 center-align">
                                         <a href="{{ url_for('delete_track', track_id=track._id) }}"
                                             class="modal-close btn red">Agree</a>
                                         <a href="#!" class="modal-close btn red">Close</a>
@@ -136,10 +138,10 @@
                                         <strong>Track Name: </strong>{{ track.track_name }}<br>
                                         <strong>Track Genre: </strong>{{ track.track_genre }}<br>
                                         <strong>Download Link: </strong>
-                                           <a class="cyan-text lighten-5 text-shadow"
+                                           <a class="cyan-text lighten-5"
                                            href="{{ track.download_link }}" target="_blank"><u>{{ track.download_link }}</u></a><br> 
                                         <strong>Preview Link: </strong>
-                                           <a class="cyan-text lighten-5 text-shadow"
+                                           <a class="cyan-text lighten-5"
                                            href="{{ track.preview }}" target="_blank"><u>{{ track.preview }}</u></a><br>
                                         <strong>Where Saved? </strong>{{ track.folder }}<br>
                                         <strong>Key: </strong>{{ track.key }}<br>

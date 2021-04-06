@@ -15,24 +15,24 @@
                 </div>
                 <div class="card-action">
                     <a href="{{ url_for('edit_set', set_id=set._id) }}" class="btn-large cyan lighten-5 accent-3
-                        blue-grey-text text-darken-4 text-shadow center-align">
+                        blue-grey-text text-darken-4 center-align">
                     <strong>Edit</strong>
                     </a>
 
                     <!--Warning Modal before User deletes their content-->
                     <a href="#modal1" class="btn-large cyan lighten-5 accent-3 
-                        blue-grey-text text-darken-4 text-shadow center-align modal-trigger">
+                        blue-grey-text text-darken-4 center-align modal-trigger">
                     <strong>Delete</strong>
                     </a>
                     <div id="modal1" class="modal">
                         <div class="modal-content cyan lighten-5 accent-3 
-                            blue-grey-text text-darken-4 text-shadow center-align">
+                            blue-grey-text text-darken-4 center-align">
                             <h3><strong>WARNING! Delete Set?</strong></h3>
                             <h4>This cannot be undone!</h4>
                             <p>Are you sure you would like to delete this set?</p>
                         </div>
                         <div class="modal-footer cyan lighten-5 accent-3 
-                            blue-grey-text text-darken-4 text-shadow center-align">
+                            blue-grey-text text-darken-4 center-align">
                             <a href="{{ url_for('delete_set', set_id=set._id) }}" class="modal-close btn red">Agree</a>
                             <a href="#!" class="modal-close btn red">Close</a>
                         </div>
