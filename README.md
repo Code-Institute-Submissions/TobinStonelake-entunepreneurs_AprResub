@@ -141,7 +141,7 @@ their social media and other media platforms.
 ### Frameworks, Libraries & Programs Used
 
 1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Lily Script One' and 'Yanone Kaffeesatz' fonts into the style.css file which is used on all pages throughout the project.
+    - Google fonts were used to import the 'Righteous', 'Alfa Slab One' and 'Pathway Gothic One' fonts into the style.css file which is used on all pages throughout the project.
 1. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [jQuery:](https://jquery.com/)
