@@ -124,6 +124,10 @@ their social media and other media platforms.
     track previews or sets are uploaded to sites such as Soundcloud and YouTube.
 * I also would have liked to have a devoted profile page that Users can access to delete
     their account and all tied data, if they wish.
+* To prevent visitors from accessing aspects of the site that require logging in, 
+'if' statements have been used to prevent the access or editing of content that requires a
+login. In the future, the author would like to rebuild the logging in system to use Flask's
+Flask-Login and Flask-SQLAlchemy, or similar packages, to enable better User management.
 
 ## Technologies Used
 
