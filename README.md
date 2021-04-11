@@ -271,21 +271,29 @@ and useable across all devices.
 
 #### HTML
 
+Homepage
 ![Homepage Test](/README_files/README_images/htmlhmpgvalid.png)
 
+Login
 ![Login Test](/README_files/README_images/htmlloginvalid.png)
 
+Register
 ![Register Test](/README_files/README_images/htmlregistervalid.png)
 
+Add Set
 ![Add Set Test](/README_files/README_images/htmladdsetvalid.png)
 
+Add Track
 ![Add Track Test](/README_files/README_images/htmladdtrackvalid.png)
 
+Manage Sets
 ![Manage Set Test](/README_files/README_images/htmlgetsetvalid.png)
 
+Edit Set
 ![Edit Set Test](/README_files/README_images/htmleditsetvalid.png)
 
-![Edit Set Test](/README_files/README_images/htmledittrackvalid.png)
+Edit Track
+![Edit Track Test](/README_files/README_images/htmledittrackvalid.png)
 
 #### CSS
 
