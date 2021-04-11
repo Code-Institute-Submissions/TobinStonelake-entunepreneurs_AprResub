@@ -265,8 +265,23 @@ and useable across all devices.
 
 ### Validators
 
-Due to the nature of using Jinja Templating, the author felt it unnecessary to include HTML validators as they came up with a host of errors.
-    Please find the CSS validator included below.
+#### HTML
+
+![Homepage Test](/README_files/README_images/htmlhmpgvalid.png)
+
+![Login Test](/README_files/README_images/htmlloginvalid.png)
+
+![Register Test](/README_files/README_images/htmlregistervalid.png)
+
+![Add Set Test](/README_files/README_images/htmladdsetvalid.png)
+
+![Add Track Test](/README_files/README_images/htmladdtrackvalid.png)
+
+![Manage Set Test](/README_files/README_images/htmlgetsetvalid.png)
+
+![Edit Set Test](/README_files/README_images/htmleditsetvalid.png)
+
+![Edit Set Test](/README_files/README_images/htmledittrackvalid.png)
 
 #### CSS
 
