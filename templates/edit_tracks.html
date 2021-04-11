@@ -5,135 +5,142 @@
         Edit Tracks
     </h1>
 
-    <!--Selector for User pre-created set-->
-    <div class="row card-panel blue-grey darken-3">
-        <form class="col s12" method="POST" action="{{ url_for('edit_track', track_id=track._id) }}">
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-record-vinyl prefix cyan-text lighten-5"></i>
-                    <select id="set_name" name="set_name" class="validate" required>
-                        <option value="" disabled>Choose your Set</option>
-                        {% for selection in set_selector %}
-                            {% if session.user|lower == selection.uploaded_by|lower %}
-                                <option value="{{ track.set_name }}" selected>{{ track.set_name }}</option>
-                            {% endif %}
-                        {% endfor %}
-                    </select>
-                    <label for="set_name">Set Selection</label>
+    {% if session.user %}
+        <!--Selector for User pre-created set-->
+        <div class="row card-panel blue-grey darken-3">
+            <form class="col s12" method="POST" action="{{ url_for('edit_track', track_id=track._id) }}">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-record-vinyl prefix cyan-text lighten-5"></i>
+                        <select id="set_name" name="set_name" class="validate" required>
+                            <option value="" disabled>Choose your Set</option>
+                            {% for selection in set_selector %}
+                                {% if session.user|lower == selection.uploaded_by|lower %}
+                                    <option value="{{ track.set_name }}" selected>{{ track.set_name }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                        <label for="set_name">Set Selection</label>
+                    </div>
                 </div>
-            </div>
-            <!-- Track No -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-list-ol prefix cyan-text lighten-5"></i>
-                    <input id="track_no" name="track_no" minlength="1" maxlength="500" 
-                       value="{{ track.track_no }}" type="number" class="validate cyan-text lighten-5" required>
-                    <label for="track_no">Track Number</label>
+                <!-- Track No -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-list-ol prefix cyan-text lighten-5"></i>
+                        <input id="track_no" name="track_no" minlength="1" maxlength="500" 
+                        value="{{ track.track_no }}" type="number" class="validate cyan-text lighten-5" required>
+                        <label for="track_no">Track Number</label>
+                    </div>
                 </div>
-            </div>
-            <!-- Artist -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-user-astronaut prefix cyan-text lighten-5"></i>
-                    <input id="artist" name="artist" minlength="1" maxlength="50" 
-                       value="{{ track.artist }}" type="text" class="validate cyan-text lighten-5" required>
-                    <label for="artist">Artist</label>
+                <!-- Artist -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-astronaut prefix cyan-text lighten-5"></i>
+                        <input id="artist" name="artist" minlength="1" maxlength="50" 
+                        value="{{ track.artist }}" type="text" class="validate cyan-text lighten-5" required>
+                        <label for="artist">Artist</label>
+                    </div>
                 </div>
-            </div>
-            <!-- Remix -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-redo prefix cyan-text lighten-5"></i>
-                    <input id="remix" name="remix" minlength="1" maxlength="50" 
-                        value="{{ track.remix }}" type="text" class="validate cyan-text lighten-5">
-                    <label for="remix">remix</label>
+                <!-- Remix -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-redo prefix cyan-text lighten-5"></i>
+                        <input id="remix" name="remix" minlength="1" maxlength="50" 
+                            value="{{ track.remix }}" type="text" class="validate cyan-text lighten-5">
+                        <label for="remix">remix</label>
+                    </div>
                 </div>
-            </div>
-            <!-- Track Name -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-play-circle prefix cyan-text lighten-5"></i>
-                    <input id="track_name" name="track_name" minlength="1" maxlength="50" 
-                        value="{{ track.track_name }}" type="text" class="validate validate cyan-text lighten-5" required>
-                    <label for="track_name">Track Name</label>
+                <!-- Track Name -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-play-circle prefix cyan-text lighten-5"></i>
+                        <input id="track_name" name="track_name" minlength="1" maxlength="50" 
+                            value="{{ track.track_name }}" type="text" class="validate validate cyan-text lighten-5" required>
+                        <label for="track_name">Track Name</label>
+                    </div>
                 </div>
-            </div>
-            <!-- Track Genre -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-compact-disc prefix cyan-text lighten-5"></i>
-                    <input id="track_genre" name="track_genre" minlength="1" maxlength="50" 
-                        value="{{ track.track_genre }}" type="text" class="validate cyan-text lighten-5">
-                    <label for="track_genre">Track Genre</label>
+                <!-- Track Genre -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-compact-disc prefix cyan-text lighten-5"></i>
+                        <input id="track_genre" name="track_genre" minlength="1" maxlength="50" 
+                            value="{{ track.track_genre }}" type="text" class="validate cyan-text lighten-5">
+                        <label for="track_genre">Track Genre</label>
+                    </div>
                 </div>
-            </div>
-            <!-- Download Link -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-cart-arrow-down prefix cyan-text lighten-5"></i>
-                    <input id="download_link" name="download_link" 
-                        value="{{ track.download_link }}" type="text" class="validate validate cyan-text lighten-5">
-                    <label for="download_link">Download Link <em>(https:// req)</em></label>
+                <!-- Download Link -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-cart-arrow-down prefix cyan-text lighten-5"></i>
+                        <input id="download_link" name="download_link" 
+                            value="{{ track.download_link }}" type="text" class="validate validate cyan-text lighten-5">
+                        <label for="download_link">Download Link <em>(https:// req)</em></label>
+                    </div>
                 </div>
-            </div>
-            <!--Preview Link-->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-headphones prefix cyan-text lighten-5"></i>
-                    <input id="preview" name="preview" 
-                        value="{{ track.preview }}" type="text" class="validate validate cyan-text lighten-5">
-                    <label for="preview">Preview Link <em>(https:// req)</em></label>
+                <!--Preview Link-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-headphones prefix cyan-text lighten-5"></i>
+                        <input id="preview" name="preview" 
+                            value="{{ track.preview }}" type="text" class="validate validate cyan-text lighten-5">
+                        <label for="preview">Preview Link <em>(https:// req)</em></label>
+                    </div>
                 </div>
-            </div>
-            <!--PC Folder-->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-folder-open prefix cyan-text lighten-5"></i>
-                    <input id="folder" name="folder" 
-                        value="{{ track.folder }}" type="text" class="validate validate cyan-text lighten-5">
-                    <label for="folder">PC Folder</label>
+                <!--PC Folder-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-folder-open prefix cyan-text lighten-5"></i>
+                        <input id="folder" name="folder" 
+                            value="{{ track.folder }}" type="text" class="validate validate cyan-text lighten-5">
+                        <label for="folder">PC Folder</label>
+                    </div>
                 </div>
-            </div>
-            <!--Key-->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-key prefix cyan-text lighten-5"></i>
-                    <input id="key" name="key" 
-                        value="{{ track.key }}" type="text" class="validate validate cyan-text lighten-5">
-                    <label for="key">Key</label>
+                <!--Key-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-key prefix cyan-text lighten-5"></i>
+                        <input id="key" name="key" 
+                            value="{{ track.key }}" type="text" class="validate validate cyan-text lighten-5">
+                        <label for="key">Key</label>
+                    </div>
                 </div>
-            </div>
-            <!--BPM-->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-stopwatch prefix cyan-text lighten-5"></i>
-                    <input id="bpm" name="bpm" 
-                        value="{{ track.bpm }}" type="number" class="validate validate cyan-text lighten-5">
-                    <label for="bpm">BPM</label>
+                <!--BPM-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-stopwatch prefix cyan-text lighten-5"></i>
+                        <input id="bpm" name="bpm" 
+                            value="{{ track.bpm }}" type="number" class="validate validate cyan-text lighten-5">
+                        <label for="bpm">BPM</label>
+                    </div>
                 </div>
-            </div>
-            <!--Mixable-->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-hand-paper prefix cyan-text lighten-5"></i>
-                    <input id="mixable" name="mixable" 
-                        value="{{ track.mixable }}" type="text" class="validate validate cyan-text lighten-5">
-                    <label for="mixable">Mixable <em>(On/Off)</em></label>
+                <!--Mixable-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-hand-paper prefix cyan-text lighten-5"></i>
+                        <input id="mixable" name="mixable" 
+                            value="{{ track.mixable }}" type="text" class="validate validate cyan-text lighten-5">
+                        <label for="mixable">Mixable <em>(On/Off)</em></label>
+                    </div>
                 </div>
-            </div>
-            <!-- Submit Set Button -->
-            <div class="row">
-                <div class="col s12 center-align">
-                    <!--Cancel Changes Button-->
-                    <a href="{{ url_for('get_tracks') }}" class="btn-large cyan lighten-5 accent-3 blue-grey-text text-darken-4 center-align">
-                        <strong>Cancel</strong>
-                    </a>
-                    <button type="submit" class="btn-large cyan lighten-5 accent-3 blue-grey-text text-darken-4 center-align">
-                        <strong>Edit Track</strong>
-                    </button>
+                <!-- Submit Set Button -->
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <!--Cancel Changes Button-->
+                        <a href="{{ url_for('get_tracks') }}" class="btn-large cyan lighten-5 accent-3 blue-grey-text text-darken-4 center-align">
+                            <strong>Cancel</strong>
+                        </a>
+                        <button type="submit" class="btn-large cyan lighten-5 accent-3 blue-grey-text text-darken-4 center-align">
+                            <strong>Edit Track</strong>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
+    {% else %}
+        <div class="center-align red-text lighten-5">
+            <h2>You need to be logged in!</h2>
+            <h3>Please go to: <a class="underline" href="{{ url_for('login') }}">Log In</a></h3>
+        </div>
+    {% endif %}
 
 {% endblock %}

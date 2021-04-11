@@ -5,81 +5,88 @@
         Edit Set
     </h1>
 
-    <div class="row card-panel cyan-text lighten-5 blue-grey darken-3">
-        <form class="col s12" method="POST" action="{{ url_for('edit_set', set_id=set._id) }}">
-            <!-- Name of Set -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-record-vinyl prefix cyan-text lighten-5"></i>
-                        {% for selection in set_selector %}
-                            {% if selection.set_name == set.set_name %}
-                                <input value="{{ selection.set_name }}" id="set_name" name="set_name" minlength="1" maxlength="50" type="text"
-                                    class="cyan-text lighten-5" required selected>
-                            {% endif %}
-                        {% endfor %}
-                    <label for="set_name">Set Name</label>                        
+    {% if session.user %}
+        <div class="row card-panel cyan-text lighten-5 blue-grey darken-3">
+            <form class="col s12" method="POST" action="{{ url_for('edit_set', set_id=set._id) }}">
+                <!-- Name of Set -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-record-vinyl prefix cyan-text lighten-5"></i>
+                            {% for selection in set_selector %}
+                                {% if selection.set_name == set.set_name %}
+                                    <input value="{{ selection.set_name }}" id="set_name" name="set_name" minlength="1" maxlength="50" type="text"
+                                        class="cyan-text lighten-5" required selected>
+                                {% endif %}
+                            {% endfor %}
+                        <label for="set_name">Set Name</label>                        
+                    </div>
                 </div>
-            </div>
-            <!-- Set Genre -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-compact-disc prefix cyan-text lighten-5"></i>
-                    <input id="genre" name="genre" minlength="1" maxlength="50" 
-                       value="{{ set.genre }}" type="text" class="cyan-text lighten-5 validate" required>
-                    <label for="genre">Genre</label>
+                <!-- Set Genre -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-compact-disc prefix cyan-text lighten-5"></i>
+                        <input id="genre" name="genre" minlength="1" maxlength="50" 
+                        value="{{ set.genre }}" type="text" class="cyan-text lighten-5 validate" required>
+                        <label for="genre">Genre</label>
+                    </div>
                 </div>
-            </div>
-            <!-- Venue Where Set Was Played -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-warehouse prefix cyan-text lighten-5"></i>
-                    <input id="venue" name="venue" minlength="1" maxlength="50" 
-                        value="{{ set.venue }}" type="text" class="cyan-text lighten-5 validate">
-                    <label for="venue">Venue</label>
+                <!-- Venue Where Set Was Played -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-warehouse prefix cyan-text lighten-5"></i>
+                        <input id="venue" name="venue" minlength="1" maxlength="50" 
+                            value="{{ set.venue }}" type="text" class="cyan-text lighten-5 validate">
+                        <label for="venue">Venue</label>
+                    </div>
                 </div>
-            </div>
-            <!-- User Upload -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-user-astronaut prefix cyan-text lighten-5"></i>
-                    <input id="uploaded_by" name="uploaded_by" minlength="1" maxlength="50" 
-                        value="{{ set.uploaded_by }}" type="text" class="cyan-text lighten-5 validate">
-                    <label for="uploaded_by">Uploaded By</label>
+                <!-- User Upload -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-astronaut prefix cyan-text lighten-5"></i>
+                        <input id="uploaded_by" name="uploaded_by" minlength="1" maxlength="50" 
+                            value="{{ set.uploaded_by }}" type="text" class="cyan-text lighten-5 validate">
+                        <label for="uploaded_by">Uploaded By</label>
+                    </div>
                 </div>
-            </div>
-            <!-- Artists Preview Page -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-podcast prefix cyan-text lighten-5"></i>
-                    <input id="artists_page" name="artists_page" minlength="1" maxlength="50" 
-                        value="{{ set.artists_page }}" type="text" class="cyan-text lighten-5 validate">
-                    <label for="artists_page">Artist Page <em>(https:// req)</em></label>
+                <!-- Artists Preview Page -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-podcast prefix cyan-text lighten-5"></i>
+                        <input id="artists_page" name="artists_page" minlength="1" maxlength="50" 
+                            value="{{ set.artists_page }}" type="text" class="cyan-text lighten-5 validate">
+                        <label for="artists_page">Artist Page <em>(https:// req)</em></label>
+                    </div>
                 </div>
-            </div>
-            <!-- Date Set Recorded -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-calendar-alt prefix cyan-text lighten-5"></i>
-                    <input id="date" name="date" 
-                        value="{{ set.date }}" type="text" class="cyan-text lighten-5 datepicker validate" required>
-                    <label for="date">Date Recorded/Presented</label>
+                <!-- Date Set Recorded -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-calendar-alt prefix cyan-text lighten-5"></i>
+                        <input id="date" name="date" 
+                            value="{{ set.date }}" type="text" class="cyan-text lighten-5 datepicker validate" required>
+                        <label for="date">Date Recorded/Presented</label>
+                    </div>
                 </div>
-            </div>
-            <!-- Submit Edits Button -->
-            <div class="row">
-                <div class="col s12 center-align">
-                    <!--Cancel Changes Button-->
-                    <a href="{{ url_for('get_sets') }}"
-                        class="btn-large cyan lighten-5 accent-3 blue-grey-text text-darken-4 center-align">
-                        <strong>Cancel</strong>
-                    </a>
-                    <button type="submit"
-                        class="btn-large cyan lighten-5 accent-3 blue-grey-text text-darken-4 center-align">
-                        <strong>Edit Set</strong>
-                    </button>
+                <!-- Submit Edits Button -->
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <!--Cancel Changes Button-->
+                        <a href="{{ url_for('get_sets') }}"
+                            class="btn-large cyan lighten-5 accent-3 blue-grey-text text-darken-4 center-align">
+                            <strong>Cancel</strong>
+                        </a>
+                        <button type="submit"
+                            class="btn-large cyan lighten-5 accent-3 blue-grey-text text-darken-4 center-align">
+                            <strong>Edit Set</strong>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
+    {% else %}
+        <div class="center-align red-text lighten-5">
+            <h2>You need to be logged in!</h2>
+            <h3>Please go to: <a class="underline" href="{{ url_for('login') }}">Log In</a></h3>
+        </div>
+    {% endif %}
 
 {% endblock %}
